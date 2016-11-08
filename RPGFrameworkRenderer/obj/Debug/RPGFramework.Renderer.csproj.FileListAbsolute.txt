@@ -1,0 +1,5 @@
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkRenderer\bin\Debug\RPGFrameworkRenderer.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkRenderer\bin\Debug\RPGFrameworkRenderer.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkRenderer\obj\Debug\RPGFramework.Renderer.csprojResolveAssemblyReference.cache
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkRenderer\obj\Debug\RPGFrameworkRenderer.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkRenderer\obj\Debug\RPGFrameworkRenderer.pdb

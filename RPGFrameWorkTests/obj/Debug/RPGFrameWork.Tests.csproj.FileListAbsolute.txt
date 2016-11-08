@@ -1,0 +1,14 @@
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameWorkTests.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameWorkTests.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFramework.exe
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameworkEntities.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameworkProcesses.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameworkRenderer.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameworkEntities.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameworkProcesses.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFrameworkRenderer.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\bin\Debug\RPGFramework.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\obj\Debug\RPGFrameWork.Tests.csprojResolveAssemblyReference.cache
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\obj\Debug\RPGFrameWorkTests.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameWorkTests\obj\Debug\RPGFrameWorkTests.pdb

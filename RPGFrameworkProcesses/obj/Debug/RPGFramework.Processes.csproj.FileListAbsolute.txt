@@ -1,0 +1,5 @@
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkProcesses\bin\Debug\RPGFrameworkProcesses.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkProcesses\bin\Debug\RPGFrameworkProcesses.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkProcesses\obj\Debug\RPGFramework.Processes.csprojResolveAssemblyReference.cache
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkProcesses\obj\Debug\RPGFrameworkProcesses.dll
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFrameworkProcesses\obj\Debug\RPGFrameworkProcesses.pdb

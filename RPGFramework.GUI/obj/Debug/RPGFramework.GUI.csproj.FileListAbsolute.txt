@@ -1,0 +1,9 @@
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.csprojResolveAssemblyReference.cache
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.Properties.Resources.resources
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.csproj.GenerateResource.Cache
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\bin\Debug\RPGFramework.GUI.exe.config
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\bin\Debug\RPGFramework.GUI.exe
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\bin\Debug\RPGFramework.GUI.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.exe
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.pdb
+C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.MainWindow.resources
