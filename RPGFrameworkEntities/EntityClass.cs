@@ -9,29 +9,32 @@ namespace RPGFramework.Entities
 {
     public class EntityClass
     {
-        private static List<string> _classes()
-        {
-            List<string> _classes = new List<string>();
-            _classes.Add("Barbarian");
-            _classes.Add("Builder");
-            _classes.Add("Thief");
-            _classes.Add("Mage");
-            _classes.Add("Civilian");
+        // This class should handle class-specific calculations and functions
 
-            return _classes;
-        }
-        public List<string> GetClasses
-        {
-            get
-            {
-                return _classes();
-            }
-        }
+        // Possibly deprecated
+        //private static List<string> _classes()
+        //{
+        //    List<string> _classes = new List<string>();
+        //    _classes.Add("Barbarian");
+        //    _classes.Add("Builder");
+        //    _classes.Add("Thief");
+        //    _classes.Add("Mage");
+        //    _classes.Add("Civilian");
 
-        public string SelectClass(string selection)
-        {
-            // ...
-            return "";
-        }
+        //    return _classes;
+        //}
+        //public List<string> GetClasses
+        //{
+        //    get
+        //    {
+        //        return _classes();
+        //    }
+        //}
+
+        //public string SelectClass(string selection)
+        //{
+        //    // ...
+        //    return "";
+        //}
     }
 }

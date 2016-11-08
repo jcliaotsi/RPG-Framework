@@ -22,8 +22,16 @@ namespace RPGFramework.Entities
 
         public Character(string entityClass, string name, int health, int spirit, int grit, int physical, int magick, int dexterity, int focus)
         {
+            //TODO: Calculate several of these based on class and starting options
+            //TODO: Assign class
+            _name = name;
             _health = health;
-
+            _spirit = spirit;
+            _grit = grit;
+            _physical = physical;
+            _magick = magick;
+            _dexterity = dexterity;
+            _focus = focus;
         }
     }
 }
