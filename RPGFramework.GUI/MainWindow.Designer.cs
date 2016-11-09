@@ -29,29 +29,6 @@
         private void InitializeComponent()
         {
             this.pnl_Player = new System.Windows.Forms.Panel();
-            this.tbl_PlayerStats = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_PlayerName = new System.Windows.Forms.Label();
-            this.lbl_PlayerHP = new System.Windows.Forms.Label();
-            this.lbl_PlayerSpr = new System.Windows.Forms.Label();
-            this.lbl_PlayerGrt = new System.Windows.Forms.Label();
-            this.lbl_PlayerPhs = new System.Windows.Forms.Label();
-            this.lbl_PlayerMag = new System.Windows.Forms.Label();
-            this.lbl_PlayerDex = new System.Windows.Forms.Label();
-            this.lbl_PlayerPri = new System.Windows.Forms.Label();
-            this.lbl_PlayerSec = new System.Windows.Forms.Label();
-            this.lbl_PlayerFoc = new System.Windows.Forms.Label();
-            this.pnl_NPC = new System.Windows.Forms.Panel();
-            this.pnl_Board = new System.Windows.Forms.Panel();
-            this.tb_PlayerName = new System.Windows.Forms.TextBox();
-            this.tb_PlayerHP = new System.Windows.Forms.TextBox();
-            this.tb_PlayerSpr = new System.Windows.Forms.TextBox();
-            this.tb_PlayerGrt = new System.Windows.Forms.TextBox();
-            this.tb_PlayerPhs = new System.Windows.Forms.TextBox();
-            this.tb_PlayerMag = new System.Windows.Forms.TextBox();
-            this.tb_PlayerDex = new System.Windows.Forms.TextBox();
-            this.tb_PlayerPri = new System.Windows.Forms.TextBox();
-            this.tb_PlayerSec = new System.Windows.Forms.TextBox();
-            this.tb_PlayerFoc = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Interact = new System.Windows.Forms.Button();
             this.btn_Adventure = new System.Windows.Forms.Button();
@@ -69,6 +46,29 @@
             this.btn_Option6 = new System.Windows.Forms.Button();
             this.btn_Option7 = new System.Windows.Forms.Button();
             this.btn_Option8 = new System.Windows.Forms.Button();
+            this.tbl_PlayerStats = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_PlayerName = new System.Windows.Forms.Label();
+            this.lbl_PlayerHP = new System.Windows.Forms.Label();
+            this.lbl_PlayerSpr = new System.Windows.Forms.Label();
+            this.lbl_PlayerGrt = new System.Windows.Forms.Label();
+            this.lbl_PlayerPhs = new System.Windows.Forms.Label();
+            this.lbl_PlayerMag = new System.Windows.Forms.Label();
+            this.lbl_PlayerDex = new System.Windows.Forms.Label();
+            this.lbl_PlayerPri = new System.Windows.Forms.Label();
+            this.lbl_PlayerSec = new System.Windows.Forms.Label();
+            this.lbl_PlayerFoc = new System.Windows.Forms.Label();
+            this.tb_PlayerName = new System.Windows.Forms.TextBox();
+            this.tb_PlayerHP = new System.Windows.Forms.TextBox();
+            this.tb_PlayerSpr = new System.Windows.Forms.TextBox();
+            this.tb_PlayerGrt = new System.Windows.Forms.TextBox();
+            this.tb_PlayerPhs = new System.Windows.Forms.TextBox();
+            this.tb_PlayerMag = new System.Windows.Forms.TextBox();
+            this.tb_PlayerDex = new System.Windows.Forms.TextBox();
+            this.tb_PlayerPri = new System.Windows.Forms.TextBox();
+            this.tb_PlayerSec = new System.Windows.Forms.TextBox();
+            this.tb_PlayerFoc = new System.Windows.Forms.TextBox();
+            this.pnl_NPC = new System.Windows.Forms.Panel();
+            this.mlb_ActionLog = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_NPCName = new System.Windows.Forms.Label();
             this.lbl_NPCHP = new System.Windows.Forms.Label();
@@ -80,18 +80,18 @@
             this.tb_NPCGender = new System.Windows.Forms.TextBox();
             this.tb_NPCHumour = new System.Windows.Forms.TextBox();
             this.tb_NPCLastAct = new System.Windows.Forms.TextBox();
-            this.mlb_ActionLog = new System.Windows.Forms.TextBox();
+            this.pnl_Board = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnl_Player.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.tbl_PlayerStats.SuspendLayout();
             this.pnl_NPC.SuspendLayout();
-            this.pnl_Board.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.pnl_Board.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -101,12 +101,271 @@
             // 
             // pnl_Player
             // 
+            this.pnl_Player.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pnl_Player.Controls.Add(this.tableLayoutPanel1);
             this.pnl_Player.Controls.Add(this.tbl_PlayerStats);
             this.pnl_Player.Location = new System.Drawing.Point(12, 12);
             this.pnl_Player.Name = "pnl_Player";
             this.pnl_Player.Size = new System.Drawing.Size(300, 537);
             this.pnl_Player.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_Interact, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Adventure, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Rest, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Run, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_PrimaryAtk, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_FocusPri, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_SecondaryAtk, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_FocusSec, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option3, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option4, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option5, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option6, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option7, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Option8, 3, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 273);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(293, 261);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // btn_Interact
+            // 
+            this.btn_Interact.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Interact.Location = new System.Drawing.Point(3, 3);
+            this.btn_Interact.Name = "btn_Interact";
+            this.btn_Interact.Size = new System.Drawing.Size(67, 59);
+            this.btn_Interact.TabIndex = 0;
+            this.btn_Interact.Text = "Interact";
+            this.btn_Interact.UseVisualStyleBackColor = true;
+            this.btn_Interact.Visible = false;
+            this.btn_Interact.Click += new System.EventHandler(this.btn_Interact_Click);
+            // 
+            // btn_Adventure
+            // 
+            this.btn_Adventure.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Adventure.Location = new System.Drawing.Point(76, 3);
+            this.btn_Adventure.Name = "btn_Adventure";
+            this.btn_Adventure.Size = new System.Drawing.Size(67, 59);
+            this.btn_Adventure.TabIndex = 1;
+            this.btn_Adventure.Text = "Adventure";
+            this.btn_Adventure.UseVisualStyleBackColor = true;
+            this.btn_Adventure.Visible = false;
+            this.btn_Adventure.Click += new System.EventHandler(this.btn_Adventure_Click);
+            // 
+            // btn_Rest
+            // 
+            this.btn_Rest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Rest.Location = new System.Drawing.Point(149, 3);
+            this.btn_Rest.Name = "btn_Rest";
+            this.btn_Rest.Size = new System.Drawing.Size(67, 59);
+            this.btn_Rest.TabIndex = 2;
+            this.btn_Rest.Text = "Rest";
+            this.btn_Rest.UseVisualStyleBackColor = true;
+            this.btn_Rest.Visible = false;
+            this.btn_Rest.Click += new System.EventHandler(this.btn_Rest_Click);
+            // 
+            // btn_Run
+            // 
+            this.btn_Run.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Run.Location = new System.Drawing.Point(222, 3);
+            this.btn_Run.Name = "btn_Run";
+            this.btn_Run.Size = new System.Drawing.Size(68, 59);
+            this.btn_Run.TabIndex = 3;
+            this.btn_Run.Text = "Run";
+            this.btn_Run.UseVisualStyleBackColor = true;
+            this.btn_Run.Visible = false;
+            this.btn_Run.Click += new System.EventHandler(this.btn_Run_Click);
+            // 
+            // btn_PrimaryAtk
+            // 
+            this.btn_PrimaryAtk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_PrimaryAtk.Location = new System.Drawing.Point(3, 68);
+            this.btn_PrimaryAtk.Name = "btn_PrimaryAtk";
+            this.btn_PrimaryAtk.Size = new System.Drawing.Size(67, 59);
+            this.btn_PrimaryAtk.TabIndex = 4;
+            this.btn_PrimaryAtk.Text = "Primary Attack";
+            this.btn_PrimaryAtk.UseVisualStyleBackColor = true;
+            this.btn_PrimaryAtk.Visible = false;
+            this.btn_PrimaryAtk.Click += new System.EventHandler(this.btn_PrimaryAtk_Click);
+            // 
+            // btn_FocusPri
+            // 
+            this.btn_FocusPri.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_FocusPri.Location = new System.Drawing.Point(76, 68);
+            this.btn_FocusPri.Name = "btn_FocusPri";
+            this.btn_FocusPri.Size = new System.Drawing.Size(67, 59);
+            this.btn_FocusPri.TabIndex = 5;
+            this.btn_FocusPri.Text = "Primary Focus Attack";
+            this.btn_FocusPri.UseVisualStyleBackColor = true;
+            this.btn_FocusPri.Visible = false;
+            this.btn_FocusPri.Click += new System.EventHandler(this.btn_FocusPri_Click);
+            // 
+            // btn_SecondaryAtk
+            // 
+            this.btn_SecondaryAtk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_SecondaryAtk.Location = new System.Drawing.Point(149, 68);
+            this.btn_SecondaryAtk.Name = "btn_SecondaryAtk";
+            this.btn_SecondaryAtk.Size = new System.Drawing.Size(67, 59);
+            this.btn_SecondaryAtk.TabIndex = 6;
+            this.btn_SecondaryAtk.Text = "Secondary Attack";
+            this.btn_SecondaryAtk.UseVisualStyleBackColor = true;
+            this.btn_SecondaryAtk.Visible = false;
+            this.btn_SecondaryAtk.Click += new System.EventHandler(this.btn_SecondaryAtk_Click);
+            // 
+            // btn_FocusSec
+            // 
+            this.btn_FocusSec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_FocusSec.Location = new System.Drawing.Point(222, 68);
+            this.btn_FocusSec.Name = "btn_FocusSec";
+            this.btn_FocusSec.Size = new System.Drawing.Size(68, 59);
+            this.btn_FocusSec.TabIndex = 7;
+            this.btn_FocusSec.Text = "Secondary Focus Attack";
+            this.btn_FocusSec.UseVisualStyleBackColor = true;
+            this.btn_FocusSec.Visible = false;
+            this.btn_FocusSec.Click += new System.EventHandler(this.btn_FocusSec_Click);
+            // 
+            // btn_Option1
+            // 
+            this.btn_Option1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option1.Location = new System.Drawing.Point(3, 133);
+            this.btn_Option1.Name = "btn_Option1";
+            this.btn_Option1.Size = new System.Drawing.Size(67, 59);
+            this.btn_Option1.TabIndex = 8;
+            this.btn_Option1.Text = "Option 1";
+            this.btn_Option1.UseVisualStyleBackColor = true;
+            this.btn_Option1.Visible = false;
+            this.btn_Option1.Click += new System.EventHandler(this.btn_Option1_Click);
+            // 
+            // btn_Option2
+            // 
+            this.btn_Option2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option2.Location = new System.Drawing.Point(76, 133);
+            this.btn_Option2.Name = "btn_Option2";
+            this.btn_Option2.Size = new System.Drawing.Size(67, 59);
+            this.btn_Option2.TabIndex = 9;
+            this.btn_Option2.Text = "Option 2";
+            this.btn_Option2.UseVisualStyleBackColor = true;
+            this.btn_Option2.Visible = false;
+            this.btn_Option2.Click += new System.EventHandler(this.btn_Option2_Click);
+            // 
+            // btn_Option3
+            // 
+            this.btn_Option3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option3.Location = new System.Drawing.Point(149, 133);
+            this.btn_Option3.Name = "btn_Option3";
+            this.btn_Option3.Size = new System.Drawing.Size(67, 59);
+            this.btn_Option3.TabIndex = 10;
+            this.btn_Option3.Text = "Option 3";
+            this.btn_Option3.UseVisualStyleBackColor = true;
+            this.btn_Option3.Visible = false;
+            this.btn_Option3.Click += new System.EventHandler(this.btn_Option3_Click);
+            // 
+            // btn_Option4
+            // 
+            this.btn_Option4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option4.Location = new System.Drawing.Point(222, 133);
+            this.btn_Option4.Name = "btn_Option4";
+            this.btn_Option4.Size = new System.Drawing.Size(68, 59);
+            this.btn_Option4.TabIndex = 11;
+            this.btn_Option4.Text = "Option 4";
+            this.btn_Option4.UseVisualStyleBackColor = true;
+            this.btn_Option4.Visible = false;
+            this.btn_Option4.Click += new System.EventHandler(this.btn_Option4_Click);
+            // 
+            // btn_Option5
+            // 
+            this.btn_Option5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option5.Location = new System.Drawing.Point(3, 198);
+            this.btn_Option5.Name = "btn_Option5";
+            this.btn_Option5.Size = new System.Drawing.Size(67, 60);
+            this.btn_Option5.TabIndex = 12;
+            this.btn_Option5.Text = "Option 5";
+            this.btn_Option5.UseVisualStyleBackColor = true;
+            this.btn_Option5.Visible = false;
+            this.btn_Option5.Click += new System.EventHandler(this.btn_Option5_Click);
+            // 
+            // btn_Option6
+            // 
+            this.btn_Option6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option6.Location = new System.Drawing.Point(76, 198);
+            this.btn_Option6.Name = "btn_Option6";
+            this.btn_Option6.Size = new System.Drawing.Size(67, 60);
+            this.btn_Option6.TabIndex = 13;
+            this.btn_Option6.Text = "Option 6";
+            this.btn_Option6.UseVisualStyleBackColor = true;
+            this.btn_Option6.Visible = false;
+            this.btn_Option6.Click += new System.EventHandler(this.btn_Option6_Click);
+            // 
+            // btn_Option7
+            // 
+            this.btn_Option7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option7.Location = new System.Drawing.Point(149, 198);
+            this.btn_Option7.Name = "btn_Option7";
+            this.btn_Option7.Size = new System.Drawing.Size(67, 60);
+            this.btn_Option7.TabIndex = 14;
+            this.btn_Option7.Text = "Option 7";
+            this.btn_Option7.UseVisualStyleBackColor = true;
+            this.btn_Option7.Visible = false;
+            this.btn_Option7.Click += new System.EventHandler(this.btn_Option7_Click);
+            // 
+            // btn_Option8
+            // 
+            this.btn_Option8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Option8.Location = new System.Drawing.Point(222, 198);
+            this.btn_Option8.Name = "btn_Option8";
+            this.btn_Option8.Size = new System.Drawing.Size(68, 60);
+            this.btn_Option8.TabIndex = 15;
+            this.btn_Option8.Text = "Option 8";
+            this.btn_Option8.UseVisualStyleBackColor = true;
+            this.btn_Option8.Visible = false;
+            this.btn_Option8.Click += new System.EventHandler(this.btn_Option8_Click);
             // 
             // tbl_PlayerStats
             // 
@@ -148,7 +407,6 @@
             this.tbl_PlayerStats.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tbl_PlayerStats.Size = new System.Drawing.Size(293, 262);
             this.tbl_PlayerStats.TabIndex = 0;
-            this.tbl_PlayerStats.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // lbl_PlayerName
             // 
@@ -250,23 +508,6 @@
             this.lbl_PlayerFoc.TabIndex = 9;
             this.lbl_PlayerFoc.Text = "Focus";
             // 
-            // pnl_NPC
-            // 
-            this.pnl_NPC.Controls.Add(this.mlb_ActionLog);
-            this.pnl_NPC.Controls.Add(this.tableLayoutPanel2);
-            this.pnl_NPC.Location = new System.Drawing.Point(872, 12);
-            this.pnl_NPC.Name = "pnl_NPC";
-            this.pnl_NPC.Size = new System.Drawing.Size(300, 537);
-            this.pnl_NPC.TabIndex = 1;
-            // 
-            // pnl_Board
-            // 
-            this.pnl_Board.Controls.Add(this.tableLayoutPanel3);
-            this.pnl_Board.Location = new System.Drawing.Point(319, 12);
-            this.pnl_Board.Name = "pnl_Board";
-            this.pnl_Board.Size = new System.Drawing.Size(547, 537);
-            this.pnl_Board.TabIndex = 2;
-            // 
             // tb_PlayerName
             // 
             this.tb_PlayerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -357,247 +598,24 @@
             this.tb_PlayerFoc.Size = new System.Drawing.Size(100, 20);
             this.tb_PlayerFoc.TabIndex = 19;
             // 
-            // tableLayoutPanel1
+            // pnl_NPC
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.btn_Interact, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Adventure, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Rest, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Run, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_PrimaryAtk, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btn_FocusPri, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btn_SecondaryAtk, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btn_FocusSec, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option3, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option4, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option5, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option6, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option7, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Option8, 3, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 273);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(293, 261);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.pnl_NPC.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnl_NPC.Controls.Add(this.mlb_ActionLog);
+            this.pnl_NPC.Controls.Add(this.tableLayoutPanel2);
+            this.pnl_NPC.Location = new System.Drawing.Point(872, 12);
+            this.pnl_NPC.Name = "pnl_NPC";
+            this.pnl_NPC.Size = new System.Drawing.Size(300, 537);
+            this.pnl_NPC.TabIndex = 1;
             // 
-            // btn_Interact
+            // mlb_ActionLog
             // 
-            this.btn_Interact.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Interact.Location = new System.Drawing.Point(3, 3);
-            this.btn_Interact.Name = "btn_Interact";
-            this.btn_Interact.Size = new System.Drawing.Size(67, 59);
-            this.btn_Interact.TabIndex = 0;
-            this.btn_Interact.Text = "Interact";
-            this.btn_Interact.UseVisualStyleBackColor = true;
-            this.btn_Interact.Visible = false;
-            // 
-            // btn_Adventure
-            // 
-            this.btn_Adventure.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Adventure.Location = new System.Drawing.Point(76, 3);
-            this.btn_Adventure.Name = "btn_Adventure";
-            this.btn_Adventure.Size = new System.Drawing.Size(67, 59);
-            this.btn_Adventure.TabIndex = 1;
-            this.btn_Adventure.Text = "Adventure";
-            this.btn_Adventure.UseVisualStyleBackColor = true;
-            this.btn_Adventure.Visible = false;
-            // 
-            // btn_Rest
-            // 
-            this.btn_Rest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Rest.Location = new System.Drawing.Point(149, 3);
-            this.btn_Rest.Name = "btn_Rest";
-            this.btn_Rest.Size = new System.Drawing.Size(67, 59);
-            this.btn_Rest.TabIndex = 2;
-            this.btn_Rest.Text = "Rest";
-            this.btn_Rest.UseVisualStyleBackColor = true;
-            this.btn_Rest.Visible = false;
-            // 
-            // btn_Run
-            // 
-            this.btn_Run.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Run.Location = new System.Drawing.Point(222, 3);
-            this.btn_Run.Name = "btn_Run";
-            this.btn_Run.Size = new System.Drawing.Size(68, 59);
-            this.btn_Run.TabIndex = 3;
-            this.btn_Run.Text = "Run";
-            this.btn_Run.UseVisualStyleBackColor = true;
-            this.btn_Run.Visible = false;
-            // 
-            // btn_PrimaryAtk
-            // 
-            this.btn_PrimaryAtk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_PrimaryAtk.Location = new System.Drawing.Point(3, 68);
-            this.btn_PrimaryAtk.Name = "btn_PrimaryAtk";
-            this.btn_PrimaryAtk.Size = new System.Drawing.Size(67, 59);
-            this.btn_PrimaryAtk.TabIndex = 4;
-            this.btn_PrimaryAtk.Text = "Primary Attack";
-            this.btn_PrimaryAtk.UseVisualStyleBackColor = true;
-            this.btn_PrimaryAtk.Visible = false;
-            // 
-            // btn_FocusPri
-            // 
-            this.btn_FocusPri.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_FocusPri.Location = new System.Drawing.Point(76, 68);
-            this.btn_FocusPri.Name = "btn_FocusPri";
-            this.btn_FocusPri.Size = new System.Drawing.Size(67, 59);
-            this.btn_FocusPri.TabIndex = 5;
-            this.btn_FocusPri.Text = "Primary Focus Attack";
-            this.btn_FocusPri.UseVisualStyleBackColor = true;
-            this.btn_FocusPri.Visible = false;
-            // 
-            // btn_SecondaryAtk
-            // 
-            this.btn_SecondaryAtk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_SecondaryAtk.Location = new System.Drawing.Point(149, 68);
-            this.btn_SecondaryAtk.Name = "btn_SecondaryAtk";
-            this.btn_SecondaryAtk.Size = new System.Drawing.Size(67, 59);
-            this.btn_SecondaryAtk.TabIndex = 6;
-            this.btn_SecondaryAtk.Text = "Secondary Attack";
-            this.btn_SecondaryAtk.UseVisualStyleBackColor = true;
-            this.btn_SecondaryAtk.Visible = false;
-            // 
-            // btn_FocusSec
-            // 
-            this.btn_FocusSec.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_FocusSec.Location = new System.Drawing.Point(222, 68);
-            this.btn_FocusSec.Name = "btn_FocusSec";
-            this.btn_FocusSec.Size = new System.Drawing.Size(68, 59);
-            this.btn_FocusSec.TabIndex = 7;
-            this.btn_FocusSec.Text = "Secondary Focus Attack";
-            this.btn_FocusSec.UseVisualStyleBackColor = true;
-            this.btn_FocusSec.Visible = false;
-            // 
-            // btn_Option1
-            // 
-            this.btn_Option1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option1.Location = new System.Drawing.Point(3, 133);
-            this.btn_Option1.Name = "btn_Option1";
-            this.btn_Option1.Size = new System.Drawing.Size(67, 59);
-            this.btn_Option1.TabIndex = 8;
-            this.btn_Option1.Text = "Option 1";
-            this.btn_Option1.UseVisualStyleBackColor = true;
-            this.btn_Option1.Visible = false;
-            // 
-            // btn_Option2
-            // 
-            this.btn_Option2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option2.Location = new System.Drawing.Point(76, 133);
-            this.btn_Option2.Name = "btn_Option2";
-            this.btn_Option2.Size = new System.Drawing.Size(67, 59);
-            this.btn_Option2.TabIndex = 9;
-            this.btn_Option2.Text = "Option 2";
-            this.btn_Option2.UseVisualStyleBackColor = true;
-            this.btn_Option2.Visible = false;
-            // 
-            // btn_Option3
-            // 
-            this.btn_Option3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option3.Location = new System.Drawing.Point(149, 133);
-            this.btn_Option3.Name = "btn_Option3";
-            this.btn_Option3.Size = new System.Drawing.Size(67, 59);
-            this.btn_Option3.TabIndex = 10;
-            this.btn_Option3.Text = "Option 3";
-            this.btn_Option3.UseVisualStyleBackColor = true;
-            this.btn_Option3.Visible = false;
-            // 
-            // btn_Option4
-            // 
-            this.btn_Option4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option4.Location = new System.Drawing.Point(222, 133);
-            this.btn_Option4.Name = "btn_Option4";
-            this.btn_Option4.Size = new System.Drawing.Size(68, 59);
-            this.btn_Option4.TabIndex = 11;
-            this.btn_Option4.Text = "Option 4";
-            this.btn_Option4.UseVisualStyleBackColor = true;
-            this.btn_Option4.Visible = false;
-            // 
-            // btn_Option5
-            // 
-            this.btn_Option5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option5.Location = new System.Drawing.Point(3, 198);
-            this.btn_Option5.Name = "btn_Option5";
-            this.btn_Option5.Size = new System.Drawing.Size(67, 60);
-            this.btn_Option5.TabIndex = 12;
-            this.btn_Option5.Text = "Option 5";
-            this.btn_Option5.UseVisualStyleBackColor = true;
-            this.btn_Option5.Visible = false;
-            // 
-            // btn_Option6
-            // 
-            this.btn_Option6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option6.Location = new System.Drawing.Point(76, 198);
-            this.btn_Option6.Name = "btn_Option6";
-            this.btn_Option6.Size = new System.Drawing.Size(67, 60);
-            this.btn_Option6.TabIndex = 13;
-            this.btn_Option6.Text = "Option 6";
-            this.btn_Option6.UseVisualStyleBackColor = true;
-            this.btn_Option6.Visible = false;
-            // 
-            // btn_Option7
-            // 
-            this.btn_Option7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option7.Location = new System.Drawing.Point(149, 198);
-            this.btn_Option7.Name = "btn_Option7";
-            this.btn_Option7.Size = new System.Drawing.Size(67, 60);
-            this.btn_Option7.TabIndex = 14;
-            this.btn_Option7.Text = "Option 7";
-            this.btn_Option7.UseVisualStyleBackColor = true;
-            this.btn_Option7.Visible = false;
-            // 
-            // btn_Option8
-            // 
-            this.btn_Option8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Option8.Location = new System.Drawing.Point(222, 198);
-            this.btn_Option8.Name = "btn_Option8";
-            this.btn_Option8.Size = new System.Drawing.Size(68, 60);
-            this.btn_Option8.TabIndex = 15;
-            this.btn_Option8.Text = "Option 8";
-            this.btn_Option8.UseVisualStyleBackColor = true;
-            this.btn_Option8.Visible = false;
+            this.mlb_ActionLog.Location = new System.Drawing.Point(4, 137);
+            this.mlb_ActionLog.Multiline = true;
+            this.mlb_ActionLog.Name = "mlb_ActionLog";
+            this.mlb_ActionLog.ReadOnly = true;
+            this.mlb_ActionLog.Size = new System.Drawing.Size(293, 397);
+            this.mlb_ActionLog.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -664,7 +682,6 @@
             this.lbl_NPCHumour.Size = new System.Drawing.Size(44, 13);
             this.lbl_NPCHumour.TabIndex = 3;
             this.lbl_NPCHumour.Text = "Humour";
-            this.lbl_NPCHumour.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbl_NPSLastAct
             // 
@@ -721,14 +738,14 @@
             this.tb_NPCLastAct.Size = new System.Drawing.Size(100, 20);
             this.tb_NPCLastAct.TabIndex = 9;
             // 
-            // mlb_ActionLog
+            // pnl_Board
             // 
-            this.mlb_ActionLog.Location = new System.Drawing.Point(4, 137);
-            this.mlb_ActionLog.Multiline = true;
-            this.mlb_ActionLog.Name = "mlb_ActionLog";
-            this.mlb_ActionLog.ReadOnly = true;
-            this.mlb_ActionLog.Size = new System.Drawing.Size(293, 397);
-            this.mlb_ActionLog.TabIndex = 1;
+            this.pnl_Board.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnl_Board.Controls.Add(this.tableLayoutPanel3);
+            this.pnl_Board.Location = new System.Drawing.Point(319, 12);
+            this.pnl_Board.Name = "pnl_Board";
+            this.pnl_Board.Size = new System.Drawing.Size(547, 537);
+            this.pnl_Board.TabIndex = 2;
             // 
             // tableLayoutPanel3
             // 
@@ -793,14 +810,14 @@
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.pnl_Player.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.tbl_PlayerStats.ResumeLayout(false);
             this.tbl_PlayerStats.PerformLayout();
             this.pnl_NPC.ResumeLayout(false);
             this.pnl_NPC.PerformLayout();
-            this.pnl_Board.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.pnl_Board.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
