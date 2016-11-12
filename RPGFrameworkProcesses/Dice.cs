@@ -9,6 +9,12 @@ namespace RPGFramework.Processes
     public class Dice
     {
         Random r = new Random();
+
+        public int RollD4()
+        {
+            return r.Next(1, 5);
+        }
+
         public int RollD6()
         {
             return r.Next(1, 7);
@@ -37,6 +43,18 @@ namespace RPGFramework.Processes
         public int RollD120()
         {
             return r.Next(1, 121);
+        }
+
+        public int RollD4(int n)
+        {
+            int total = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                total += RollD4();
+            }
+
+            return total;
         }
 
         public int RollD6(int n)

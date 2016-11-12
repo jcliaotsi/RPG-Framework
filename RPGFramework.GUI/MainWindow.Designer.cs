@@ -513,7 +513,6 @@
             this.tb_PlayerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tb_PlayerName.Location = new System.Drawing.Point(149, 3);
             this.tb_PlayerName.Name = "tb_PlayerName";
-            this.tb_PlayerName.ReadOnly = true;
             this.tb_PlayerName.Size = new System.Drawing.Size(100, 20);
             this.tb_PlayerName.TabIndex = 10;
             // 
