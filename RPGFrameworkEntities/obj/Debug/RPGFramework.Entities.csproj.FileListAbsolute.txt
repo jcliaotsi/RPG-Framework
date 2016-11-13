@@ -9,9 +9,7 @@ C:\Users\thomas.hanby\Workspaces\RPGFramework\ClassLibrary1\obj\Debug\RPGFramewo
 C:\Users\thomas.hanby\Workspaces\RPGFramework\ClassLibrary1\obj\Debug\RPGFrameworkEntities.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\bin\Debug\RPGFrameworkEntities.dll
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\bin\Debug\RPGFrameworkEntities.pdb
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\bin\Debug\RPGFrameworkProcesses.dll
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\bin\Debug\RPGFrameworkRenderer.dll
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\bin\Debug\RPGFrameworkProcesses.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\bin\Debug\RPGFrameworkRenderer.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\obj\Debug\RPGFramework.Entities.csprojResolveAssemblyReference.cache
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameworkEntities\obj\Debug\RPGFrameworkEntities.dll

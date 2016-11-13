@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPGFramework.Entities
+namespace RPGFramework.Processes
 {
-    public class NPC
+    public class Combat
     {
+        Random r = new Random();
 
+        public Combat()
+        {
+
+        }
     }
 }

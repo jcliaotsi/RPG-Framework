@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RPGFramework.Processes;
 
 namespace RPGFramework.Entities
 {
@@ -22,6 +21,12 @@ namespace RPGFramework.Entities
         private int _focus { get; set; }
         private int _primaryAtk { get; set; }
         private int _secondaryAtk { get; set; }
+        private string _gender { get; set; }
+        private string _humour { get; set; }
+        private string _lastAction { get; set; }
+        private int _damageTaken { get; set; }
+        private string _primaryType { get; set; }
+        private string _secondaryType { get; set; }
 
         public string Class
         {
@@ -103,6 +108,54 @@ namespace RPGFramework.Entities
             }
         }
 
+        public string Gender
+        {
+            get
+            {
+                return _gender;
+            }
+        }
+
+        public string Humour
+        {
+            get
+            {
+                return _humour;
+            }
+        }
+
+        public string LastAction
+        {
+            get
+            {
+                return _lastAction;
+            }
+        }
+
+        public int DamageTaken
+        {
+            get
+            {
+                return _damageTaken;
+            }
+        }
+
+        public string PrimaryType
+        {
+            get
+            {
+                return _primaryType;
+            }
+        }
+
+        public string SecondaryType
+        {
+            get
+            {
+                return _secondaryType;
+            }
+        }
+
         public Character()
         {
 
@@ -115,6 +168,8 @@ namespace RPGFramework.Entities
             //TODO: Calculate several of these based on class and starting options
             _class = characterClass;
             _name = name;
+            _gender = "male"; // Placeholder
+            _humour = "angry"; // Placeholder
             //_health = health;
             //_spirit = spirit;
             //_grit = grit;
@@ -136,6 +191,8 @@ namespace RPGFramework.Entities
                         _focus = 100;
                         _primaryAtk = (_physical * 2) + _dexterity;
                         _secondaryAtk = _magick + _spirit;
+                        _primaryType = "physical";
+                        _secondaryType = "magick";
                         break;
                     }
 
@@ -150,6 +207,8 @@ namespace RPGFramework.Entities
                         _focus = 100;
                         _primaryAtk = _physical + _grit + _dexterity;
                         _secondaryAtk = _magick + _spirit;
+                        _primaryType = "physical";
+                        _secondaryType = "magick";
                         break;
                     }
 
@@ -164,6 +223,8 @@ namespace RPGFramework.Entities
                         _focus = 100;
                         _primaryAtk = (_dexterity * 2) + _physical;
                         _secondaryAtk = _magick + _spirit;
+                        _primaryType = "dexterity";
+                        _secondaryType = "magick";
                         break;
                     }
 
@@ -178,6 +239,8 @@ namespace RPGFramework.Entities
                         _focus = 100;
                         _primaryAtk = (_magick * 2) + _spirit;
                         _secondaryAtk = _physical + _dexterity;
+                        _primaryType = "magick";
+                        _secondaryType = "pysical";
                         break;
                     }
 
@@ -192,6 +255,8 @@ namespace RPGFramework.Entities
                         _focus = d.RollD120(2);
                         _primaryAtk = _physical + _dexterity + _grit;
                         _secondaryAtk = _magick + _spirit + _grit;
+                        _primaryType = "physical";
+                        _secondaryType = "magick";
                         break;
                     }
 
@@ -206,6 +271,8 @@ namespace RPGFramework.Entities
                         _focus = 50;
                         _primaryAtk = (_physical * 2) + _dexterity;
                         _secondaryAtk = (_magick * 2) + _spirit;
+                        _primaryType = "physical";
+                        _secondaryType = "magick";
                         break;
                     }
 

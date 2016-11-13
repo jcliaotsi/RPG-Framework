@@ -16,6 +16,7 @@ namespace RPGFramework.GUI
         //TODO: Add saving system or DB instead of just instantiating
         ControlStatus cs = new ControlStatus();
         Character pc;
+        Encounter en;
         public MainWindow()
         {
             InitializeComponent();
@@ -24,6 +25,9 @@ namespace RPGFramework.GUI
 
         public void Initializer()
         {
+            DefaultAllButtons();
+            DefaultAllText();
+
             btn_Option1.Text = "Start";
             btn_Option1.Visible = true;
             cs.btn_Option1_Status = "start";
@@ -77,6 +81,8 @@ namespace RPGFramework.GUI
             tb_PlayerSec.Text = pc.SecondaryAtk.ToString();
 
             DefaultAllButtons();
+
+            btn_Adventure.Visible = true;
         }
 
         #endregion
@@ -85,17 +91,61 @@ namespace RPGFramework.GUI
 
         private void btn_Interact_Click(object sender, EventArgs e)
         {
+            string h = tb_NPCHumour.Text;
 
+            switch (h)
+            {
+                case "angry":
+                    //TODO: Random action generator
+                    mlb_ActionLog.AppendText(tb_NPCName.Text + " is having none of your shit.\n");
+                    // Attack
+                    break;
+
+                case "affable":
+                    //TODO: Random action generator
+                    mlb_ActionLog.AppendText(tb_NPCName.Text + " greets you like a friend.\n");
+                    break;
+
+                case "suspicious":
+                    //TODO: Random action generator
+                    mlb_ActionLog.AppendText(tb_NPCName.Text + " gives you a cautious greeting.\n");
+                    break;
+
+                case "seedy":
+                    //TODO: Random action generator
+                    mlb_ActionLog.AppendText(tb_NPCName.Text + " eyes you like a piece of meat and cackles.\n");
+                    break;
+
+                case "flirty":
+                    //TODO: Random action generator
+                    mlb_ActionLog.AppendText(tb_NPCName.Text + " compliments your kilt. You aren't wearing a kilt.\n");
+                    break;
+
+                case "rampaging":
+                    //TODO: Random action generator
+                    mlb_ActionLog.AppendText(tb_NPCName.Text + " wrecks your face. Why did you think that was a good idea?\n");
+                    // Attack twice
+                    break;
+            }
         }
 
         private void btn_Adventure_Click(object sender, EventArgs e)
         {
+            en = new Encounter();
 
+            tb_NPCName.Text = en.Npc.Name;
+            tb_NPCHP.Text = "0";
+            tb_NPCHumour.Text = en.Npc.Humour;
+            tb_NPCGender.Text = en.Npc.Gender;
+            tb_NPCLastAct.Text = "none";
+
+            mlb_ActionLog.AppendText("A wild " + en.Npc.Name + " appears!\n");
+            ReadyEncounter();
         }
 
         private void btn_Rest_Click(object sender, EventArgs e)
         {
-
+            //TODO: Set max values for character stats so resting can be accomplished
         }
 
         private void btn_Run_Click(object sender, EventArgs e)
@@ -105,7 +155,13 @@ namespace RPGFramework.GUI
 
         private void btn_PrimaryAtk_Click(object sender, EventArgs e)
         {
-
+            Combat c = new Combat();
+            int damage = c.PrimaryAtk(pc, en.Npc);
+            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            // This is ghetto
+            int holder = Convert.ToInt32(tb_NPCHP.Text);
+            holder += damage;
+            tb_NPCHP.Text = holder.ToString();
         }
 
         private void btn_FocusPri_Click(object sender, EventArgs e)
@@ -244,6 +300,37 @@ namespace RPGFramework.GUI
             btn_Option6.Visible = false;
             btn_Option7.Visible = false;
             btn_Option8.Visible = false;
+        }
+
+        private void DefaultAllText()
+        {
+            tb_PlayerName.Text = "";
+            tb_PlayerHP.Text = "";
+            tb_PlayerSpr.Text = "";
+            tb_PlayerGrt.Text = "";
+            tb_PlayerPhs.Text = "";
+            tb_PlayerMag.Text = "";
+            tb_PlayerDex.Text = "";
+            tb_PlayerFoc.Text = "";
+
+            tb_NPCName.Text = "";
+            tb_NPCGender.Text = "";
+            tb_NPCHP.Text = "";
+            tb_NPCHumour.Text = "";
+            tb_NPCLastAct.Text = "";
+
+            mlb_ActionLog.Text = "";
+        }
+
+        private void ReadyEncounter()
+        {
+            btn_Adventure.Visible = false;
+            btn_Interact.Visible = true;
+            btn_PrimaryAtk.Visible = true;
+            btn_FocusPri.Visible = true;
+            btn_SecondaryAtk.Visible = true;
+            btn_FocusSec.Visible = true;
+            btn_Run.Visible = true;
         }
 
         #endregion

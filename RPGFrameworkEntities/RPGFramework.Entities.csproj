@@ -45,15 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Combat.cs" />
+    <Compile Include="Dice.cs" />
+    <Compile Include="Encounter.cs" />
     <Compile Include="EntityClass.cs" />
     <Compile Include="NPC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RPGFrameworkProcesses\RPGFramework.Processes.csproj">
-      <Project>{9d7139e3-16aa-4037-a1a9-1d75719d56a3}</Project>
-      <Name>RPGFramework.Processes</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RPGFrameworkRenderer\RPGFramework.Renderer.csproj">
       <Project>{dad99ff0-c6d1-46cc-ab6f-7f569e03368f}</Project>
       <Name>RPGFramework.Renderer</Name>
