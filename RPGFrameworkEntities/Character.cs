@@ -182,10 +182,10 @@ namespace RPGFramework.Entities
             {
                 case ("Barbarian"):
                     {
-                        _health = 96 + d.RollD10(4);
+                        _health = 10 + d.RollD6(4);
                         _spirit = 10;
                         _grit = 80;
-                        _physical = _health / d.RollD4();
+                        _physical = _health / d.RollD4(); //TODO: Revamp to be in-line with dice rolls
                         _magick = _spirit;
                         _dexterity = _health / d.RollD8();
                         _focus = 100;
@@ -198,7 +198,7 @@ namespace RPGFramework.Entities
 
                 case ("Builder"):
                     {
-                        _health = 88 + d.RollD20(2);
+                        _health = 10 + d.RollD20();
                         _spirit = 10;
                         _grit = 100;
                         _physical = _health / d.RollD6();
@@ -214,7 +214,7 @@ namespace RPGFramework.Entities
 
                 case ("Thief"):
                     {
-                        _health = 64 + d.RollD8(6);
+                        _health = 10 + d.RollD8();
                         _spirit = 30;
                         _grit = 60;
                         _physical = _health / d.RollD8();
@@ -230,7 +230,7 @@ namespace RPGFramework.Entities
 
                 case ("Mage"):
                     {
-                        _health = 32 + d.RollD8(8);
+                        _health = 10 + d.RollD4();
                         _spirit = 100;
                         _grit = 40;
                         _physical = _health / d.RollD12();
@@ -246,14 +246,14 @@ namespace RPGFramework.Entities
 
                 case ("Mystic Traveler"):
                     {
-                        _health = d.RollD120(2);
-                        _spirit = d.RollD120(2);
-                        _grit = d.RollD120(2);
-                        _physical = d.RollD120(2);
-                        _magick = d.RollD120(2);
-                        _dexterity = d.RollD120(2);
-                        _focus = d.RollD120(2);
-                        _primaryAtk = _physical + _dexterity + _grit;
+                        _health = d.RollD20(2);
+                        _spirit = d.RollD20(2);
+                        _grit = d.RollD20(2);
+                        _physical = d.RollD20(2);
+                        _magick = d.RollD20(2);
+                        _dexterity = d.RollD20(2);
+                        _focus = d.RollD20(2);
+                        _primaryAtk = _physical + _dexterity + _grit; // Implement a random system that gives clues to which it will be
                         _secondaryAtk = _magick + _spirit + _grit;
                         _primaryType = "physical";
                         _secondaryType = "magick";
