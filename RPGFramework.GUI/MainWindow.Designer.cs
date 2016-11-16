@@ -77,15 +77,17 @@
             this.lbl_NPSLastAct = new System.Windows.Forms.Label();
             this.tb_NPCName = new System.Windows.Forms.TextBox();
             this.tb_NPCHP = new System.Windows.Forms.TextBox();
-            this.tb_NPCGender = new System.Windows.Forms.TextBox();
-            this.tb_NPCHumour = new System.Windows.Forms.TextBox();
             this.tb_NPCLastAct = new System.Windows.Forms.TextBox();
+            this.tb_NPCHumour = new System.Windows.Forms.TextBox();
+            this.tb_NPCGender = new System.Windows.Forms.TextBox();
+            this.tb_NPCClass = new System.Windows.Forms.TextBox();
             this.pnl_Board = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbl_NPCClass = new System.Windows.Forms.Label();
             this.pnl_Player.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tbl_PlayerStats.SuspendLayout();
@@ -609,11 +611,11 @@
             // 
             // mlb_ActionLog
             // 
-            this.mlb_ActionLog.Location = new System.Drawing.Point(4, 137);
+            this.mlb_ActionLog.Location = new System.Drawing.Point(4, 166);
             this.mlb_ActionLog.Multiline = true;
             this.mlb_ActionLog.Name = "mlb_ActionLog";
             this.mlb_ActionLog.ReadOnly = true;
-            this.mlb_ActionLog.Size = new System.Drawing.Size(293, 397);
+            this.mlb_ActionLog.Size = new System.Drawing.Size(293, 368);
             this.mlb_ActionLog.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -623,23 +625,26 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.lbl_NPCName, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl_NPCHP, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_NPCGender, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_NPCHumour, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_NPSLastAct, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.tb_NPCName, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tb_NPCHP, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.tb_NPCGender, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.tb_NPCHumour, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.tb_NPCLastAct, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.tb_NPCLastAct, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.tb_NPCHumour, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.tb_NPCGender, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.tb_NPCClass, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_NPSLastAct, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_NPCHumour, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_NPCGender, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_NPCClass, 1, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(293, 131);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(293, 156);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // lbl_NPCName
@@ -666,7 +671,7 @@
             // 
             this.lbl_NPCGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_NPCGender.AutoSize = true;
-            this.lbl_NPCGender.Location = new System.Drawing.Point(149, 58);
+            this.lbl_NPCGender.Location = new System.Drawing.Point(149, 84);
             this.lbl_NPCGender.Name = "lbl_NPCGender";
             this.lbl_NPCGender.Size = new System.Drawing.Size(42, 13);
             this.lbl_NPCGender.TabIndex = 2;
@@ -676,7 +681,7 @@
             // 
             this.lbl_NPCHumour.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_NPCHumour.AutoSize = true;
-            this.lbl_NPCHumour.Location = new System.Drawing.Point(149, 84);
+            this.lbl_NPCHumour.Location = new System.Drawing.Point(149, 110);
             this.lbl_NPCHumour.Name = "lbl_NPCHumour";
             this.lbl_NPCHumour.Size = new System.Drawing.Size(44, 13);
             this.lbl_NPCHumour.TabIndex = 3;
@@ -686,7 +691,7 @@
             // 
             this.lbl_NPSLastAct.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_NPSLastAct.AutoSize = true;
-            this.lbl_NPSLastAct.Location = new System.Drawing.Point(149, 111);
+            this.lbl_NPSLastAct.Location = new System.Drawing.Point(149, 136);
             this.lbl_NPSLastAct.Name = "lbl_NPSLastAct";
             this.lbl_NPSLastAct.Size = new System.Drawing.Size(57, 13);
             this.lbl_NPSLastAct.TabIndex = 4;
@@ -710,32 +715,40 @@
             this.tb_NPCHP.Size = new System.Drawing.Size(100, 20);
             this.tb_NPCHP.TabIndex = 6;
             // 
-            // tb_NPCGender
+            // tb_NPCLastAct
             // 
-            this.tb_NPCGender.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tb_NPCGender.Location = new System.Drawing.Point(43, 55);
-            this.tb_NPCGender.Name = "tb_NPCGender";
-            this.tb_NPCGender.ReadOnly = true;
-            this.tb_NPCGender.Size = new System.Drawing.Size(100, 20);
-            this.tb_NPCGender.TabIndex = 7;
+            this.tb_NPCLastAct.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tb_NPCLastAct.Location = new System.Drawing.Point(43, 133);
+            this.tb_NPCLastAct.Name = "tb_NPCLastAct";
+            this.tb_NPCLastAct.ReadOnly = true;
+            this.tb_NPCLastAct.Size = new System.Drawing.Size(100, 20);
+            this.tb_NPCLastAct.TabIndex = 9;
             // 
             // tb_NPCHumour
             // 
             this.tb_NPCHumour.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tb_NPCHumour.Location = new System.Drawing.Point(43, 81);
+            this.tb_NPCHumour.Location = new System.Drawing.Point(43, 107);
             this.tb_NPCHumour.Name = "tb_NPCHumour";
             this.tb_NPCHumour.ReadOnly = true;
             this.tb_NPCHumour.Size = new System.Drawing.Size(100, 20);
             this.tb_NPCHumour.TabIndex = 8;
             // 
-            // tb_NPCLastAct
+            // tb_NPCGender
             // 
-            this.tb_NPCLastAct.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tb_NPCLastAct.Location = new System.Drawing.Point(43, 107);
-            this.tb_NPCLastAct.Name = "tb_NPCLastAct";
-            this.tb_NPCLastAct.ReadOnly = true;
-            this.tb_NPCLastAct.Size = new System.Drawing.Size(100, 20);
-            this.tb_NPCLastAct.TabIndex = 9;
+            this.tb_NPCGender.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tb_NPCGender.Location = new System.Drawing.Point(43, 81);
+            this.tb_NPCGender.Name = "tb_NPCGender";
+            this.tb_NPCGender.ReadOnly = true;
+            this.tb_NPCGender.Size = new System.Drawing.Size(100, 20);
+            this.tb_NPCGender.TabIndex = 7;
+            // 
+            // tb_NPCClass
+            // 
+            this.tb_NPCClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tb_NPCClass.Location = new System.Drawing.Point(43, 55);
+            this.tb_NPCClass.Name = "tb_NPCClass";
+            this.tb_NPCClass.Size = new System.Drawing.Size(100, 20);
+            this.tb_NPCClass.TabIndex = 10;
             // 
             // pnl_Board
             // 
@@ -797,6 +810,16 @@
             this.pictureBox4.Size = new System.Drawing.Size(264, 259);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            // 
+            // lbl_NPCClass
+            // 
+            this.lbl_NPCClass.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_NPCClass.AutoSize = true;
+            this.lbl_NPCClass.Location = new System.Drawing.Point(149, 58);
+            this.lbl_NPCClass.Name = "lbl_NPCClass";
+            this.lbl_NPCClass.Size = new System.Drawing.Size(32, 13);
+            this.lbl_NPCClass.TabIndex = 11;
+            this.lbl_NPCClass.Text = "Class";
             // 
             // MainWindow
             // 
@@ -886,5 +909,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TextBox tb_NPCClass;
+        private System.Windows.Forms.Label lbl_NPCClass;
     }
 }

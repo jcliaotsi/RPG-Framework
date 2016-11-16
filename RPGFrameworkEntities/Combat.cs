@@ -10,6 +10,7 @@ namespace RPGFramework.Entities
     {
         Random r = new Random();
         Dice d = new Dice();
+        Utilities u = new Utilities();
 
         public Combat()
         {
@@ -18,28 +19,22 @@ namespace RPGFramework.Entities
 
         public int PrimaryAtk(Character attacker, Character defender)
         {
-            // This section is just a bunch of BS to get a system in place.
-            // NEEDS HEAVY EDITING
-            //TODO: Make this dice-based? -Yes, make it dice-based.
+            // Very basic system. Needs more complexity.
             int damage = 0;
-            //int ratio = 0;
 
             if (attacker.PrimaryType == "physical")
             {
-                //ratio = attacker.PrimaryAtk / (defender.Physical + defender.Grit);
-                damage = attacker.Physical + DetermineBonus(attacker.Physical) - defender.Physical;
+                damage = attacker.Physical + u.DetermineBonus(attacker.Physical) - defender.Dexterity;
             }
 
             else if (attacker.PrimaryType == "magick")
             {
-                //ratio = attacker.PrimaryAtk / (defender.Magick + defender.Spirit);
-                damage = attacker.Magick + DetermineBonus(attacker.Magick) - defender.Magick;
+                damage = attacker.Magick + u.DetermineBonus(attacker.Magick) - defender.Magick;
             }
 
             else if (attacker.PrimaryType == "dexterity")
             {
-                //ratio = attacker.PrimaryAtk / (defender.Dexterity + defender.Grit);
-                damage = attacker.Dexterity + DetermineBonus(attacker.Dexterity) - defender.Dexterity;
+                damage = attacker.Dexterity + u.DetermineBonus(attacker.Dexterity) - defender.Physical;
             }
 
             else
@@ -55,46 +50,105 @@ namespace RPGFramework.Entities
             return damage;
         }
 
-        private int DetermineBonus(int skill)
+        public int SecondaryAtk(Character attacker, Character defender)
         {
-            int bonus = 0;
+            // Very basic system. Needs more complexity.
+            int damage = 0;
 
-            if (skill < 11)
+            if (attacker.SecondaryType == "physical")
             {
-                bonus = d.RollD4();
+                damage = attacker.Physical + u.DetermineBonus(attacker.Physical) - defender.Dexterity;
             }
 
-            else if (skill >= 11 && skill < 15)
+            else if (attacker.SecondaryType == "magick")
             {
-                bonus = d.RollD6();
+                damage = attacker.Magick + u.DetermineBonus(attacker.Magick) - defender.Magick;
             }
 
-            else if (skill >= 15 && skill < 18)
+            else if (attacker.SecondaryType == "dexterity")
             {
-                bonus = d.RollD8();
+                damage = attacker.Dexterity + u.DetermineBonus(attacker.Dexterity) - defender.Physical;
             }
 
-            else if (skill >=18 && skill < 20)
+            else
             {
-                bonus = d.RollD10();
+                //TODO: Throw exception
             }
 
-            else if (skill >=20 && skill < 22)
+            if (damage < 0)
             {
-                bonus = d.RollD6(2);
+                damage = 0;
             }
 
-            else if (skill >= 22 && skill < 24)
+            return damage;
+        }
+
+        public int PrimaryFoc(Character attacker, Character defender)
+        {
+            // Very basic system. Needs more complexity.
+            int damage = 0;
+            bool maxDmg = true;
+
+            if (attacker.PrimaryType == "physical")
             {
-                bonus = d.RollD8(2);
+                damage = attacker.Physical + u.DetermineBonus(attacker.Physical, maxDmg);
             }
 
-            else if (skill >=24)
+            else if (attacker.PrimaryType == "magick")
             {
-                bonus = d.RollD10(2);
+                damage = attacker.Magick + u.DetermineBonus(attacker.Magick, maxDmg);
             }
 
-            return bonus;
+            else if (attacker.PrimaryType == "dexterity")
+            {
+                damage = attacker.Dexterity + u.DetermineBonus(attacker.Dexterity, maxDmg);
+            }
+
+            else
+            {
+                //TODO: Throw exception
+            }
+
+            if (damage < 0)
+            {
+                damage = 0;
+            }
+
+            return damage;
+        }
+
+        public int SecondaryFoc(Character attacker, Character defender)
+        {
+            // Very basic system. Needs more complexity.
+            int damage = 0;
+            bool maxDmg = true;
+
+            if (attacker.SecondaryType == "physical")
+            {
+                damage = attacker.Physical + u.DetermineBonus(attacker.Physical, maxDmg);
+            }
+
+            else if (attacker.SecondaryType == "magick")
+            {
+                damage = attacker.Magick + u.DetermineBonus(attacker.Magick, maxDmg);
+            }
+
+            else if (attacker.SecondaryType == "dexterity")
+            {
+                damage = attacker.Dexterity + u.DetermineBonus(attacker.Dexterity, maxDmg);
+            }
+
+            else
+            {
+                //TODO: Throw exception
+            }
+
+            if (damage < 0)
+            {
+                damage = 0;
+            }
+
+            return damage;
         }
     }
 }

@@ -17,6 +17,8 @@ namespace RPGFramework.GUI
         ControlStatus cs = new ControlStatus();
         Character pc;
         Encounter en;
+        Utilities u = new Utilities();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -138,8 +140,12 @@ namespace RPGFramework.GUI
             tb_NPCHumour.Text = en.Npc.Humour;
             tb_NPCGender.Text = en.Npc.Gender;
             tb_NPCLastAct.Text = "none";
+            tb_NPCClass.Text = en.Npc.Class;
 
             mlb_ActionLog.AppendText("A wild " + en.Npc.Name + " appears!\n");
+
+            bool playerHasInit = RollInitiative(pc, en.Npc);
+
             ReadyEncounter();
         }
 
@@ -166,17 +172,35 @@ namespace RPGFramework.GUI
 
         private void btn_FocusPri_Click(object sender, EventArgs e)
         {
-
+            Combat c = new Combat();
+            int damage = c.PrimaryFoc(pc, en.Npc);
+            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            // This is ghetto
+            int holder = Convert.ToInt32(tb_NPCHP.Text);
+            holder += damage;
+            tb_NPCHP.Text = holder.ToString();
         }
 
         private void btn_SecondaryAtk_Click(object sender, EventArgs e)
         {
-
+            Combat c = new Combat();
+            int damage = c.SecondaryAtk(pc, en.Npc);
+            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            // This is ghetto
+            int holder = Convert.ToInt32(tb_NPCHP.Text);
+            holder += damage;
+            tb_NPCHP.Text = holder.ToString();
         }
 
         private void btn_FocusSec_Click(object sender, EventArgs e)
         {
-
+            Combat c = new Combat();
+            int damage = c.SecondaryFoc(pc, en.Npc);
+            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            // This is ghetto
+            int holder = Convert.ToInt32(tb_NPCHP.Text);
+            holder += damage;
+            tb_NPCHP.Text = holder.ToString();
         }
 
         private void btn_Option1_Click(object sender, EventArgs e)
@@ -318,6 +342,7 @@ namespace RPGFramework.GUI
             tb_NPCHP.Text = "";
             tb_NPCHumour.Text = "";
             tb_NPCLastAct.Text = "";
+            tb_NPCClass.Text = "";
 
             mlb_ActionLog.Text = "";
         }
@@ -331,6 +356,34 @@ namespace RPGFramework.GUI
             btn_SecondaryAtk.Visible = true;
             btn_FocusSec.Visible = true;
             btn_Run.Visible = true;
+        }
+
+        private bool RollInitiative(Character attacker, Character defender, bool surprise = false)
+        {
+            //TODO: Implement surprise rounds
+            bool attackerHasInitiative;
+            int attackerInit;
+            int defenderInit;
+
+            if (surprise == true)
+            {
+                return attackerHasInitiative = true;
+            }
+
+            attackerInit = u.DetermineBonus(attacker.Dexterity) + attacker.Dexterity;
+            defenderInit = u.DetermineBonus(defender.Dexterity) + defender.Dexterity;
+
+            if (attackerInit > defenderInit)
+            {
+                attackerHasInitiative = true;
+            }
+
+            else
+            {
+                attackerHasInitiative = false;
+            }
+
+            return attackerHasInitiative;
         }
 
         #endregion

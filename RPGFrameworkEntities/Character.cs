@@ -122,6 +122,11 @@ namespace RPGFramework.Entities
             {
                 return _humour;
             }
+
+            set
+            {
+                _humour = value;
+            }
         }
 
         public string LastAction
@@ -165,64 +170,52 @@ namespace RPGFramework.Entities
         //TODO: Write character creation method
         public Character(string characterClass, string name)
         {
+            Utilities u = new Utilities();
             //TODO: Calculate several of these based on class and starting options
             _class = characterClass;
             _name = name;
             _gender = "male"; // Placeholder
             _humour = "angry"; // Placeholder
-            //_health = health;
-            //_spirit = spirit;
-            //_grit = grit;
-            //_physical = physical;
-            //_magick = magick;
-            //_dexterity = dexterity;
-            //_focus = focus;
 
             switch(characterClass)
             {
                 case ("Barbarian"):
                     {
-                        _health = 10 + d.RollD6(4);
-                        _spirit = 10;
-                        _grit = 80;
-                        _physical = _health / d.RollD4(); //TODO: Revamp to be in-line with dice rolls
-                        _magick = _spirit;
-                        _dexterity = _health / d.RollD8();
-                        _focus = 100;
-                        _primaryAtk = (_physical * 2) + _dexterity;
-                        _secondaryAtk = _magick + _spirit;
+                        _physical = 10 + d.RollD6(4);
+                        _magick = d.RollD10();
+                        _dexterity = 3 + d.RollD10();
+                        _health = _physical + u.DetermineBonus(_physical);
+                        _spirit = _magick + u.DetermineBonus(_magick);
+                        _grit = 16 + d.RollD4();
+                        _focus = 10;
                         _primaryType = "physical";
-                        _secondaryType = "magick";
+                        _secondaryType = "magick"; // Possibly switch to dex?
                         break;
                     }
 
                 case ("Builder"):
                     {
-                        _health = 10 + d.RollD20();
-                        _spirit = 10;
-                        _grit = 100;
-                        _physical = _health / d.RollD6();
-                        _magick = _spirit;
-                        _dexterity = _health / d.RollD10();
-                        _focus = 100;
-                        _primaryAtk = _physical + _grit + _dexterity;
-                        _secondaryAtk = _magick + _spirit;
+                        _physical = 10 + d.RollD12(2);
+                        _magick = d.RollD8();
+                        _dexterity = 5 + d.RollD10();
+                        _health = _physical + u.DetermineBonus(_physical);
+                        _spirit = _magick + u.DetermineBonus(_magick);
+                        _grit = 16 + d.RollD6();
+                        _focus = 10;
                         _primaryType = "physical";
-                        _secondaryType = "magick";
+                        _secondaryType = "magick"; // Possibly switch to dex?
                         break;
                     }
 
                 case ("Thief"):
                     {
-                        _health = 10 + d.RollD8();
-                        _spirit = 30;
-                        _grit = 60;
-                        _physical = _health / d.RollD8();
-                        _magick = _spirit;
-                        _dexterity = 28 + d.RollD20(2);
-                        _focus = 100;
-                        _primaryAtk = (_dexterity * 2) + _physical;
-                        _secondaryAtk = _magick + _spirit;
+                        _physical = 10 + d.RollD10();
+                        _magick = d.RollD8(2);
+                        _dexterity = 12 + d.RollD6(4);
+                        _health = _physical + u.DetermineBonus(_physical);
+                        _spirit = _magick + u.DetermineBonus(_magick);
+                        _grit = 10 + d.RollD6();
+                        _focus = 10;
                         _primaryType = "dexterity";
                         _secondaryType = "magick";
                         break;
@@ -230,15 +223,13 @@ namespace RPGFramework.Entities
 
                 case ("Mage"):
                     {
-                        _health = 10 + d.RollD4();
-                        _spirit = 100;
-                        _grit = 40;
-                        _physical = _health / d.RollD12();
-                        _magick = _spirit + d.RollD20();
-                        _dexterity = _health / d.RollD12();
-                        _focus = 100;
-                        _primaryAtk = (_magick * 2) + _spirit;
-                        _secondaryAtk = _physical + _dexterity;
+                        _physical = 10 + d.RollD6();
+                        _magick = 12 + d.RollD6(4);
+                        _dexterity = d.RollD10();
+                        _health = _physical + u.DetermineBonus(_physical);
+                        _spirit = _magick + u.DetermineBonus(_magick);
+                        _grit = 10 + d.RollD4();
+                        _focus = 10;
                         _primaryType = "magick";
                         _secondaryType = "pysical";
                         break;
@@ -253,8 +244,6 @@ namespace RPGFramework.Entities
                         _magick = d.RollD20(2);
                         _dexterity = d.RollD20(2);
                         _focus = d.RollD20(2);
-                        _primaryAtk = _physical + _dexterity + _grit; // Implement a random system that gives clues to which it will be
-                        _secondaryAtk = _magick + _spirit + _grit;
                         _primaryType = "physical";
                         _secondaryType = "magick";
                         break;
@@ -262,15 +251,13 @@ namespace RPGFramework.Entities
 
                 case ("Civilian"):
                     {
-                        _health = 10;
-                        _spirit = 10;
-                        _grit = 10;
-                        _physical = d.RollD20();
-                        _magick = d.RollD20();
-                        _dexterity = d.RollD20();
-                        _focus = 50;
-                        _primaryAtk = (_physical * 2) + _dexterity;
-                        _secondaryAtk = (_magick * 2) + _spirit;
+                        _physical = d.RollD10();
+                        _magick = d.RollD10();
+                        _dexterity = d.RollD10();
+                        _health = _physical + u.DetermineBonus(_physical);
+                        _spirit = _magick + u.DetermineBonus(_magick);
+                        _grit = d.RollD10();
+                        _focus = 10;
                         _primaryType = "physical";
                         _secondaryType = "magick";
                         break;

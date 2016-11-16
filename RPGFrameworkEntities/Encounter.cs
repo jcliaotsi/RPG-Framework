@@ -39,6 +39,33 @@ namespace RPGFramework.Entities
                     Npc = new Character("Civilian", "DEEZ NUTS");
                     break;
             }
+
+            switch(r.Next(1, 7))
+            {
+                case 1:
+                    Npc.Humour = "angry";
+                    break;
+
+                case 2:
+                    Npc.Humour = "affable";
+                    break;
+
+                case 3:
+                    Npc.Humour = "suspicious";
+                    break;
+
+                case 4:
+                    Npc.Humour = "seedy";
+                    break;
+
+                case 5:
+                    Npc.Humour = "flirty";
+                    break;
+
+                case 6:
+                    Npc.Humour = "rampaging";
+                    break;
+            }
         }
     }
 }
