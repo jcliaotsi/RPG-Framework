@@ -9,6 +9,7 @@ namespace RPGFramework.Entities
     public class Utilities
     {
         Dice d = new Dice();
+        Utilities u = new Utilities();
 
         public int DetermineBonus(int skill, bool max = false)
         {
@@ -50,6 +51,42 @@ namespace RPGFramework.Entities
             }
 
             return bonus;
+        }
+
+        /// <summary>
+        ///     This method currently is used only for the player rolling intiative,
+        ///     but could also be used in the reverse in the future.
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="defender"></param>
+        /// <param name="surprise"></param>
+        /// <returns></returns>
+        public bool RollInitiative(Character attacker, Character defender, bool surprise = false)
+        {
+            //TODO: Implement surprise rounds
+            bool attackerHasInitiative;
+            int attackerInit;
+            int defenderInit;
+
+            if (surprise == true)
+            {
+                return attackerHasInitiative = true;
+            }
+
+            attackerInit = u.DetermineBonus(attacker.Dexterity) + attacker.Dexterity;
+            defenderInit = u.DetermineBonus(defender.Dexterity) + defender.Dexterity;
+
+            if (attackerInit > defenderInit)
+            {
+                attackerHasInitiative = true;
+            }
+
+            else
+            {
+                attackerHasInitiative = false;
+            }
+
+            return attackerHasInitiative;
         }
     }
 }

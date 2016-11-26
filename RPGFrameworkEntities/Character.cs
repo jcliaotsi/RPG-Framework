@@ -8,7 +8,13 @@ namespace RPGFramework.Entities
 {
     public class Character
     {
+        #region Globals
+
         Dice d = new Dice();
+
+        #endregion
+
+        #region Private Properties
 
         private string _class { get; set; }
         private string _name { get; set; }
@@ -27,6 +33,11 @@ namespace RPGFramework.Entities
         private int _damageTaken { get; set; }
         private string _primaryType { get; set; }
         private string _secondaryType { get; set; }
+        private int _currentHealth { get; set; }
+
+        #endregion
+
+        #region Public Properties
 
         public string Class
         {
@@ -161,6 +172,22 @@ namespace RPGFramework.Entities
             }
         }
 
+        public int CurrentHealth
+        {
+            get
+            {
+                return _currentHealth;
+            }
+            set
+            {
+                _currentHealth = value;
+            }
+        }
+
+        #endregion
+
+        #region Constructors
+
         public Character()
         {
 
@@ -185,6 +212,7 @@ namespace RPGFramework.Entities
                         _magick = d.RollD10();
                         _dexterity = 3 + d.RollD10();
                         _health = _physical + u.DetermineBonus(_physical);
+                        _currentHealth = _health;
                         _spirit = _magick + u.DetermineBonus(_magick);
                         _grit = 16 + d.RollD4();
                         _focus = 10;
@@ -199,6 +227,7 @@ namespace RPGFramework.Entities
                         _magick = d.RollD8();
                         _dexterity = 5 + d.RollD10();
                         _health = _physical + u.DetermineBonus(_physical);
+                        _currentHealth = _health;
                         _spirit = _magick + u.DetermineBonus(_magick);
                         _grit = 16 + d.RollD6();
                         _focus = 10;
@@ -213,6 +242,7 @@ namespace RPGFramework.Entities
                         _magick = d.RollD8(2);
                         _dexterity = 12 + d.RollD6(4);
                         _health = _physical + u.DetermineBonus(_physical);
+                        _currentHealth = _health;
                         _spirit = _magick + u.DetermineBonus(_magick);
                         _grit = 10 + d.RollD6();
                         _focus = 10;
@@ -227,6 +257,7 @@ namespace RPGFramework.Entities
                         _magick = 12 + d.RollD6(4);
                         _dexterity = d.RollD10();
                         _health = _physical + u.DetermineBonus(_physical);
+                        _currentHealth = _health;
                         _spirit = _magick + u.DetermineBonus(_magick);
                         _grit = 10 + d.RollD4();
                         _focus = 10;
@@ -238,6 +269,7 @@ namespace RPGFramework.Entities
                 case ("Mystic Traveler"):
                     {
                         _health = d.RollD20(2);
+                        _currentHealth = _health;
                         _spirit = d.RollD20(2);
                         _grit = d.RollD20(2);
                         _physical = d.RollD20(2);
@@ -255,6 +287,7 @@ namespace RPGFramework.Entities
                         _magick = d.RollD10();
                         _dexterity = d.RollD10();
                         _health = _physical + u.DetermineBonus(_physical);
+                        _currentHealth = _health;
                         _spirit = _magick + u.DetermineBonus(_magick);
                         _grit = d.RollD10();
                         _focus = 10;
@@ -270,5 +303,17 @@ namespace RPGFramework.Entities
                     }
             }
         }
+
+        #endregion
+
+        #region Public Methods
+
+        public void Rest()
+        {
+            _currentHealth = _health;
+            // Expand with rest of stats as needed...
+        }
+
+        #endregion
     }
 }

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Character.cs" />
     <Compile Include="Combat.cs" />
+    <Compile Include="CombatOld.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="Encounter.cs" />
     <Compile Include="EntityClass.cs" />

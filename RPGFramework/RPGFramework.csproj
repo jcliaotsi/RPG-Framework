@@ -54,6 +54,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RPGFrameworkEntities\RPGFramework.Entities.csproj">
+      <Project>{514d0475-6586-4614-8701-a48d75c0362b}</Project>
+      <Name>RPGFramework.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RPGFrameworkRenderer\RPGFramework.Renderer.csproj">
       <Project>{dad99ff0-c6d1-46cc-ab6f-7f569e03368f}</Project>
       <Name>RPGFramework.Renderer</Name>

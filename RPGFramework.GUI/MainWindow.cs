@@ -18,6 +18,7 @@ namespace RPGFramework.GUI
         Character pc;
         Encounter en;
         Utilities u = new Utilities();
+        Dice d = new Dice();
 
         public MainWindow()
         {
@@ -27,7 +28,7 @@ namespace RPGFramework.GUI
 
         public void Initializer()
         {
-            DefaultAllButtons();
+            DefaultAllOptionButtons();
             DefaultAllText();
 
             btn_Option1.Text = "Start";
@@ -82,7 +83,7 @@ namespace RPGFramework.GUI
             tb_PlayerPri.Text = pc.PrimaryAtk.ToString();
             tb_PlayerSec.Text = pc.SecondaryAtk.ToString();
 
-            DefaultAllButtons();
+            DefaultAllOptionButtons();
 
             btn_Adventure.Visible = true;
         }
@@ -136,7 +137,7 @@ namespace RPGFramework.GUI
             en = new Encounter();
 
             tb_NPCName.Text = en.Npc.Name;
-            tb_NPCHP.Text = "0";
+            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
             tb_NPCHumour.Text = en.Npc.Humour;
             tb_NPCGender.Text = en.Npc.Gender;
             tb_NPCLastAct.Text = "none";
@@ -151,56 +152,68 @@ namespace RPGFramework.GUI
 
         private void btn_Rest_Click(object sender, EventArgs e)
         {
-            //TODO: Set max values for character stats so resting can be accomplished
+            pc.Rest();
+            mlb_ActionLog.AppendText("You feel well-rested.");
         }
 
         private void btn_Run_Click(object sender, EventArgs e)
         {
+            int result = 0;
 
+            result = u.DetermineBonus(pc.Dexterity) + d.RollD10() - u.DetermineBonus(en.Npc.Dexterity);
+
+            if (result > 5)
+            {
+                // Success
+                en = null;
+                
+            }
+
+            else
+            {
+                mlb_ActionLog.AppendText("You try to flee but are caught!");
+                // Attack
+            }
         }
 
         private void btn_PrimaryAtk_Click(object sender, EventArgs e)
         {
-            Combat c = new Combat();
+            CombatOld c = new CombatOld();
             int damage = c.PrimaryAtk(pc, en.Npc);
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto
-            int holder = Convert.ToInt32(tb_NPCHP.Text);
-            holder += damage;
-            tb_NPCHP.Text = holder.ToString();
+            en.Npc.CurrentHealth -= damage;
+            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_FocusPri_Click(object sender, EventArgs e)
         {
-            Combat c = new Combat();
+            CombatOld c = new CombatOld();
             int damage = c.PrimaryFoc(pc, en.Npc);
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto
-            int holder = Convert.ToInt32(tb_NPCHP.Text);
-            holder += damage;
-            tb_NPCHP.Text = holder.ToString();
+            en.Npc.CurrentHealth -= damage;
+            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_SecondaryAtk_Click(object sender, EventArgs e)
         {
-            Combat c = new Combat();
+            CombatOld c = new CombatOld();
             int damage = c.SecondaryAtk(pc, en.Npc);
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto
-            int holder = Convert.ToInt32(tb_NPCHP.Text);
-            holder += damage;
-            tb_NPCHP.Text = holder.ToString();
+            en.Npc.CurrentHealth -= damage;
+            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_FocusSec_Click(object sender, EventArgs e)
         {
-            Combat c = new Combat();
+            CombatOld c = new CombatOld();
             int damage = c.SecondaryFoc(pc, en.Npc);
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto
-            int holder = Convert.ToInt32(tb_NPCHP.Text);
-            holder += damage;
-            tb_NPCHP.Text = holder.ToString();
+            en.Npc.CurrentHealth -= damage;
+            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_Option1_Click(object sender, EventArgs e)
@@ -305,6 +318,27 @@ namespace RPGFramework.GUI
 
         #region Utilities
 
+        private void DefaultAllOptionButtons()
+        {
+            cs.btn_Option1_Status = "default";
+            cs.btn_Option2_Status = "default";
+            cs.btn_Option3_Status = "default";
+            cs.btn_Option4_Status = "default";
+            cs.btn_Option5_Status = "default";
+            cs.btn_Option6_Status = "default";
+            cs.btn_Option7_Status = "default";
+            cs.btn_Option8_Status = "default";
+
+            btn_Option1.Visible = false;
+            btn_Option2.Visible = false;
+            btn_Option3.Visible = false;
+            btn_Option4.Visible = false;
+            btn_Option5.Visible = false;
+            btn_Option6.Visible = false;
+            btn_Option7.Visible = false;
+            btn_Option8.Visible = false;
+        }
+
         private void DefaultAllButtons()
         {
             cs.btn_Option1_Status = "default";
@@ -324,6 +358,24 @@ namespace RPGFramework.GUI
             btn_Option6.Visible = false;
             btn_Option7.Visible = false;
             btn_Option8.Visible = false;
+
+            cs.btn_Adventure_Status = "default";
+            cs.btn_Interact_Status = "default";
+            cs.btn_Run_Status = "default";
+            cs.btn_Rest_Status = "default";
+            cs.btn_PrimaryAtk_Status = "default";
+            cs.btn_FocusPri_Status = "default";
+            cs.btn_SecondaryAtk_Status = "default";
+            cs.btn_FocusSec_Status = "default";
+
+            btn_Adventure.Visible = false;
+            btn_Interact.Visible = false;
+            btn_Run.Visible = false;
+            btn_Rest.Visible = false;
+            btn_PrimaryAtk.Visible = false;
+            btn_FocusPri.Visible = false;
+            btn_SecondaryAtk.Visible = false;
+            btn_FocusSec.Visible = false;
         }
 
         private void DefaultAllText()
@@ -347,6 +399,23 @@ namespace RPGFramework.GUI
             mlb_ActionLog.Text = "";
         }
 
+        private void DefaultNpc()
+        {
+            tb_NPCName.Text = "";
+            tb_NPCGender.Text = "";
+            tb_NPCHP.Text = "";
+            tb_NPCHumour.Text = "";
+            tb_NPCLastAct.Text = "";
+            tb_NPCClass.Text = "";
+        }
+
+        private void DefaultAdventure()
+        {
+            DefaultAllButtons();
+            btn_Adventure.Visible = true;
+            mlb_ActionLog.AppendText("Ready for another adventure?");
+        }
+
         private void ReadyEncounter()
         {
             btn_Adventure.Visible = false;
@@ -358,6 +427,14 @@ namespace RPGFramework.GUI
             btn_Run.Visible = true;
         }
 
+        /// <summary>
+        ///     This method currently is used only for the player rolling intiative,
+        ///     but could also be used in the reverse in the future.
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="defender"></param>
+        /// <param name="surprise"></param>
+        /// <returns></returns>
         private bool RollInitiative(Character attacker, Character defender, bool surprise = false)
         {
             //TODO: Implement surprise rounds

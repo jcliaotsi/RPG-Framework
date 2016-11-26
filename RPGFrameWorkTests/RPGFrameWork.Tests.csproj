@@ -59,6 +59,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RPGFramework.GUI\RPGFramework.GUI.csproj">
+      <Project>{cd1dc293-2ad3-41c8-9263-fa60237f83b0}</Project>
+      <Name>RPGFramework.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RPGFrameworkEntities\RPGFramework.Entities.csproj">
+      <Project>{514d0475-6586-4614-8701-a48d75c0362b}</Project>
+      <Name>RPGFramework.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RPGFrameworkRenderer\RPGFramework.Renderer.csproj">
       <Project>{dad99ff0-c6d1-46cc-ab6f-7f569e03368f}</Project>
       <Name>RPGFramework.Renderer</Name>

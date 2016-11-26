@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RPGFramework;
-using RPGFramework.Entities;
-using RPGFramework.Processes;
 using RPGFramework.Renderer;
 using System.Collections.Generic;
+using RPGFramework.Entities;
+using RPGFramework.GUI;
 
 namespace RPGFrameWork.Tests
 {
