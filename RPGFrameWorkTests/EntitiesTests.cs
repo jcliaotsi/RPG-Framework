@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RPGFramework;
-using RPGFramework.Renderer;
 
 namespace RPGFrameWork.Tests
 {

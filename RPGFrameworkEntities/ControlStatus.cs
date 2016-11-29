@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPGFramework.GUI
+namespace RPGFramework.Entities
 {
     public class ControlStatus
     {

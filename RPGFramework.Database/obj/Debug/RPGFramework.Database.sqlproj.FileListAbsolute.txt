@@ -1,0 +1,5 @@
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.Database\bin\Debug\RPGFramework.Database.dacpac
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.Database\bin\Debug\RPGFramework.Database.dll
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.Database\bin\Debug\RPGFramework.Database.pdb
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.Database\obj\Debug\RPGFramework.Database.dll
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.Database\obj\Debug\RPGFramework.Database.pdb

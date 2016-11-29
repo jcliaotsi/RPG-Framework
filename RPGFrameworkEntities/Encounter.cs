@@ -10,6 +10,19 @@ namespace RPGFramework.Entities
     {
         Random r = new Random();
         public Character Npc;
+        private ControlStatus _cs = new ControlStatus();
+        public ControlStatus Cs
+        {
+            get
+            {
+                return _cs;
+            }
+
+            set
+            {
+                _cs = value;
+            }
+        }
 
         public Encounter()
         {

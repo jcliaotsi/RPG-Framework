@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="f9001d55-a684-4b36-a962-783d24411943" ChangeDateTime="11/29/2016 21:23:46">
+    <Property Name="ElementName" Value="[dbo].[Characters].[Dexterity]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Characters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Grit" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="867791b0-fd4f-4f5b-ad3d-9adaf86e5d8c" ChangeDateTime="11/29/2016 21:25:36">
+    <Property Name="ElementName" Value="[dbo].[Characters].[Humout]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Characters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Humour" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2142fa18-de19-4b5e-887d-bb9f7295e4c1" ChangeDateTime="11/29/2016 22:19:07">
+    <Property Name="ElementName" Value="[dbo].[Encounters].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Encounters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EncounterId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="562e4949-e4be-43e0-a79d-caeefc42449d" ChangeDateTime="11/29/2016 22:19:12">
+    <Property Name="ElementName" Value="[dbo].[Characters].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Characters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CharacterId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9a54a1a7-d503-4805-9c16-996393636b07" ChangeDateTime="11/29/2016 22:19:21">
+    <Property Name="ElementName" Value="[dbo].[Combats].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Combats]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CombatId" />
+  </Operation>
+</Operations>

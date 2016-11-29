@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RPGFramework.Entities;
+using RPGFramework.GUI;
 
 namespace RPGFramework.GUI
 {
@@ -17,6 +18,7 @@ namespace RPGFramework.GUI
         ControlStatus cs = new ControlStatus();
         Character pc;
         Encounter en;
+        Combat c = new Combat();
         Utilities u = new Utilities();
         Dice d = new Dice();
 
@@ -145,6 +147,11 @@ namespace RPGFramework.GUI
 
             mlb_ActionLog.AppendText("A wild " + en.Npc.Name + " appears!\n");
 
+            if (en.Npc.Humour == "angry" || en.Npc.Humour == "rampaging")
+            {
+                c = new Combat(pc, en.Npc, cs);
+            }
+
             bool playerHasInit = RollInitiative(pc, en.Npc);
 
             ReadyEncounter();
@@ -178,8 +185,13 @@ namespace RPGFramework.GUI
 
         private void btn_PrimaryAtk_Click(object sender, EventArgs e)
         {
-            CombatOld c = new CombatOld();
-            int damage = c.PrimaryAtk(pc, en.Npc);
+            cs.btn_PrimaryAtk_Status = "clicked";
+            c.Cs.btn_PrimaryAtk_Status = "clicked";
+            //CombatOld co = new CombatOld();
+            //int damage = co.PrimaryAtk(pc, en.Npc);
+            int damage = en.Npc.CurrentHealth;
+            c.PrimaryAttack(pc, en.Npc);
+            damage -= en.Npc.CurrentHealth;
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto
             en.Npc.CurrentHealth -= damage;

@@ -21,8 +21,6 @@ C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\Mic
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFramework.exe
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFramework.GUI.exe
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFrameworkEntities.dll
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFrameworkRenderer.dll
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFramework.GUI.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFrameworkEntities.pdb
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFrameworkRenderer.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFrameWorkTests\bin\Debug\RPGFramework.pdb

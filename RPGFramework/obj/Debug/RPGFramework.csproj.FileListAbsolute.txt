@@ -17,8 +17,6 @@ C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\obj\Debug\RPGFrame
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFramework.exe
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFramework.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFrameworkEntities.dll
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFrameworkRenderer.dll
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFrameworkEntities.pdb
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFrameworkRenderer.pdb
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFramework.exe.CodeAnalysisLog.xml
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFramework.exe.lastcodeanalysissucceeded
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFramework.GUI.exe
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework\bin\Debug\RPGFramework.GUI.pdb
