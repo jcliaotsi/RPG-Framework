@@ -72,22 +72,22 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_NPCName = new System.Windows.Forms.Label();
             this.lbl_NPCHP = new System.Windows.Forms.Label();
-            this.lbl_NPCGender = new System.Windows.Forms.Label();
-            this.lbl_NPCHumour = new System.Windows.Forms.Label();
-            this.lbl_NPSLastAct = new System.Windows.Forms.Label();
             this.tb_NPCName = new System.Windows.Forms.TextBox();
             this.tb_NPCHP = new System.Windows.Forms.TextBox();
             this.tb_NPCLastAct = new System.Windows.Forms.TextBox();
             this.tb_NPCHumour = new System.Windows.Forms.TextBox();
             this.tb_NPCGender = new System.Windows.Forms.TextBox();
             this.tb_NPCClass = new System.Windows.Forms.TextBox();
+            this.lbl_NPSLastAct = new System.Windows.Forms.Label();
+            this.lbl_NPCHumour = new System.Windows.Forms.Label();
+            this.lbl_NPCGender = new System.Windows.Forms.Label();
+            this.lbl_NPCClass = new System.Windows.Forms.Label();
             this.pnl_Board = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lbl_NPCClass = new System.Windows.Forms.Label();
             this.pnl_Player.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tbl_PlayerStats.SuspendLayout();
@@ -663,39 +663,9 @@
             this.lbl_NPCHP.AutoSize = true;
             this.lbl_NPCHP.Location = new System.Drawing.Point(149, 32);
             this.lbl_NPCHP.Name = "lbl_NPCHP";
-            this.lbl_NPCHP.Size = new System.Drawing.Size(81, 13);
+            this.lbl_NPCHP.Size = new System.Drawing.Size(38, 13);
             this.lbl_NPCHP.TabIndex = 1;
-            this.lbl_NPCHP.Text = "Damage Taken";
-            // 
-            // lbl_NPCGender
-            // 
-            this.lbl_NPCGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_NPCGender.AutoSize = true;
-            this.lbl_NPCGender.Location = new System.Drawing.Point(149, 84);
-            this.lbl_NPCGender.Name = "lbl_NPCGender";
-            this.lbl_NPCGender.Size = new System.Drawing.Size(42, 13);
-            this.lbl_NPCGender.TabIndex = 2;
-            this.lbl_NPCGender.Text = "Gender";
-            // 
-            // lbl_NPCHumour
-            // 
-            this.lbl_NPCHumour.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_NPCHumour.AutoSize = true;
-            this.lbl_NPCHumour.Location = new System.Drawing.Point(149, 110);
-            this.lbl_NPCHumour.Name = "lbl_NPCHumour";
-            this.lbl_NPCHumour.Size = new System.Drawing.Size(44, 13);
-            this.lbl_NPCHumour.TabIndex = 3;
-            this.lbl_NPCHumour.Text = "Humour";
-            // 
-            // lbl_NPSLastAct
-            // 
-            this.lbl_NPSLastAct.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_NPSLastAct.AutoSize = true;
-            this.lbl_NPSLastAct.Location = new System.Drawing.Point(149, 136);
-            this.lbl_NPSLastAct.Name = "lbl_NPSLastAct";
-            this.lbl_NPSLastAct.Size = new System.Drawing.Size(57, 13);
-            this.lbl_NPSLastAct.TabIndex = 4;
-            this.lbl_NPSLastAct.Text = "LastAction";
+            this.lbl_NPCHP.Text = "Health";
             // 
             // tb_NPCName
             // 
@@ -749,6 +719,46 @@
             this.tb_NPCClass.Name = "tb_NPCClass";
             this.tb_NPCClass.Size = new System.Drawing.Size(100, 20);
             this.tb_NPCClass.TabIndex = 10;
+            // 
+            // lbl_NPSLastAct
+            // 
+            this.lbl_NPSLastAct.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_NPSLastAct.AutoSize = true;
+            this.lbl_NPSLastAct.Location = new System.Drawing.Point(149, 136);
+            this.lbl_NPSLastAct.Name = "lbl_NPSLastAct";
+            this.lbl_NPSLastAct.Size = new System.Drawing.Size(57, 13);
+            this.lbl_NPSLastAct.TabIndex = 4;
+            this.lbl_NPSLastAct.Text = "LastAction";
+            // 
+            // lbl_NPCHumour
+            // 
+            this.lbl_NPCHumour.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_NPCHumour.AutoSize = true;
+            this.lbl_NPCHumour.Location = new System.Drawing.Point(149, 110);
+            this.lbl_NPCHumour.Name = "lbl_NPCHumour";
+            this.lbl_NPCHumour.Size = new System.Drawing.Size(44, 13);
+            this.lbl_NPCHumour.TabIndex = 3;
+            this.lbl_NPCHumour.Text = "Humour";
+            // 
+            // lbl_NPCGender
+            // 
+            this.lbl_NPCGender.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_NPCGender.AutoSize = true;
+            this.lbl_NPCGender.Location = new System.Drawing.Point(149, 84);
+            this.lbl_NPCGender.Name = "lbl_NPCGender";
+            this.lbl_NPCGender.Size = new System.Drawing.Size(42, 13);
+            this.lbl_NPCGender.TabIndex = 2;
+            this.lbl_NPCGender.Text = "Gender";
+            // 
+            // lbl_NPCClass
+            // 
+            this.lbl_NPCClass.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_NPCClass.AutoSize = true;
+            this.lbl_NPCClass.Location = new System.Drawing.Point(149, 58);
+            this.lbl_NPCClass.Name = "lbl_NPCClass";
+            this.lbl_NPCClass.Size = new System.Drawing.Size(32, 13);
+            this.lbl_NPCClass.TabIndex = 11;
+            this.lbl_NPCClass.Text = "Class";
             // 
             // pnl_Board
             // 
@@ -810,16 +820,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(264, 259);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
-            // 
-            // lbl_NPCClass
-            // 
-            this.lbl_NPCClass.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_NPCClass.AutoSize = true;
-            this.lbl_NPCClass.Location = new System.Drawing.Point(149, 58);
-            this.lbl_NPCClass.Name = "lbl_NPCClass";
-            this.lbl_NPCClass.Size = new System.Drawing.Size(32, 13);
-            this.lbl_NPCClass.TabIndex = 11;
-            this.lbl_NPCClass.Text = "Class";
             // 
             // MainWindow
             // 

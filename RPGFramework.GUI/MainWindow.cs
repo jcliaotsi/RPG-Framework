@@ -18,7 +18,7 @@ namespace RPGFramework.GUI
         ControlStatus cs = new ControlStatus();
         Character pc;
         Encounter en;
-        Combat c = new Combat();
+        Combat_Shelved c = new Combat_Shelved();
         Utilities u = new Utilities();
         Dice d = new Dice();
 
@@ -149,7 +149,7 @@ namespace RPGFramework.GUI
 
             if (en.Npc.Humour == "angry" || en.Npc.Humour == "rampaging")
             {
-                c = new Combat(pc, en.Npc, cs);
+                c = new Combat_Shelved(pc, en.Npc, cs);
             }
 
             bool playerHasInit = RollInitiative(pc, en.Npc);
@@ -200,7 +200,7 @@ namespace RPGFramework.GUI
 
         private void btn_FocusPri_Click(object sender, EventArgs e)
         {
-            CombatOld c = new CombatOld();
+            Combat c = new Combat();
             int damage = c.PrimaryFoc(pc, en.Npc);
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto
@@ -210,7 +210,7 @@ namespace RPGFramework.GUI
 
         private void btn_SecondaryAtk_Click(object sender, EventArgs e)
         {
-            CombatOld c = new CombatOld();
+            Combat c = new Combat();
             int damage = c.SecondaryAtk(pc, en.Npc);
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto
@@ -220,7 +220,7 @@ namespace RPGFramework.GUI
 
         private void btn_FocusSec_Click(object sender, EventArgs e)
         {
-            CombatOld c = new CombatOld();
+            Combat c = new Combat();
             int damage = c.SecondaryFoc(pc, en.Npc);
             mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
             // This is ghetto

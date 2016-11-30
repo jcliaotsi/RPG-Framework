@@ -46,8 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Combat_Shelved.cs" />
     <Compile Include="Combat.cs" />
-    <Compile Include="CombatOld.cs" />
     <Compile Include="ControlStatus.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="Encounter.cs" />

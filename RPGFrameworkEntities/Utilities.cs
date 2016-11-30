@@ -9,7 +9,6 @@ namespace RPGFramework.Entities
     public class Utilities
     {
         Dice d = new Dice();
-        Utilities u = new Utilities();
 
         public int DetermineBonus(int skill, bool max = false)
         {
@@ -73,8 +72,8 @@ namespace RPGFramework.Entities
                 return attackerHasInitiative = true;
             }
 
-            attackerInit = u.DetermineBonus(attacker.Dexterity) + attacker.Dexterity;
-            defenderInit = u.DetermineBonus(defender.Dexterity) + defender.Dexterity;
+            attackerInit = this.DetermineBonus(attacker.Dexterity) + attacker.Dexterity;
+            defenderInit = this.DetermineBonus(defender.Dexterity) + defender.Dexterity;
 
             if (attackerInit > defenderInit)
             {
