@@ -18,3 +18,4 @@ C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGF
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.csproj.GenerateResource.Cache
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFrameworkEntities.dll
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFrameworkEntities.pdb
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.Disclaimer.resources

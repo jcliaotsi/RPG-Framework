@@ -30,6 +30,9 @@ namespace RPGFramework.GUI
 
         public void Initializer()
         {
+            var disclaimer = new Disclaimer();
+            disclaimer.Show();
+
             DefaultAllOptionButtons();
             DefaultAllText();
 
