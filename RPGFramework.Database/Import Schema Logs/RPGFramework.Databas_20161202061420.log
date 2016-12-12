@@ -1,0 +1,10 @@
+12/2/2016 1:14:20 PM	This log contains information about the import schema operation into project 'RPGFramework.Database' on computer 'WIN-P7CBO3W80D' by user 'thomas.hanby'.
+12/2/2016 1:14:20 PM	Deserializing model
+12/2/2016 1:14:21 PM	Resolving model
+12/2/2016 1:14:22 PM	Visiting imported model for types
+12/2/2016 1:14:22 PM	Scanning project for duplicate elements
+12/2/2016 1:14:22 PM	Finished duplicate element processing
+12/2/2016 1:14:22 PM	Processing extra files
+12/2/2016 1:14:22 PM	Finished importing Data-tier Application file.
+12/2/2016 1:14:22 PM	A summary of the import was saved to the following location: C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.Database\Import Schema Logs\RPGFramework.Databas_20161202061420.log
+12/2/2016 1:14:22 PM	Click Finish to continue...

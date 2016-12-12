@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RPGFramework.Entities;
 using RPGFramework.GUI;
+using RPGFramework.Entities;
 
 namespace RPGFramework.GUI
 {
@@ -18,7 +18,7 @@ namespace RPGFramework.GUI
         ControlStatus cs = new ControlStatus();
         Character pc;
         Encounter en;
-        Combat_Shelved c = new Combat_Shelved();
+        //Combat_Shelved c = new Combat_Shelved();
         Utilities u = new Utilities();
         Dice d = new Dice();
 
@@ -136,25 +136,25 @@ namespace RPGFramework.GUI
 
         private void btn_Adventure_Click(object sender, EventArgs e)
         {
-            en = new Encounter();
+            //en = new Encounter();
 
-            tb_NPCName.Text = en.Npc.Name;
-            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
-            tb_NPCHumour.Text = en.Npc.Humour;
-            tb_NPCGender.Text = en.Npc.Gender;
-            tb_NPCLastAct.Text = "none";
-            tb_NPCClass.Text = en.Npc.Class;
+            //tb_NPCName.Text = en.Npc.Name;
+            //tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
+            //tb_NPCHumour.Text = en.Npc.Humour;
+            //tb_NPCGender.Text = en.Npc.Gender;
+            //tb_NPCLastAct.Text = "none";
+            //tb_NPCClass.Text = en.Npc.Class;
 
-            mlb_ActionLog.AppendText("A wild " + en.Npc.Name + " appears!\n");
+            //mlb_ActionLog.AppendText("A wild " + en.Npc.Name + " appears!\n");
 
-            if (en.Npc.Humour == "angry" || en.Npc.Humour == "rampaging")
-            {
-                c = new Combat_Shelved(pc, en.Npc, cs);
-            }
+            //if (en.Npc.Humour == "angry" || en.Npc.Humour == "rampaging")
+            //{
+            //    c = new Combat_Shelved(pc, en.Npc, cs);
+            //}
 
-            bool playerHasInit = RollInitiative(pc, en.Npc);
+            //bool playerHasInit = RollInitiative(pc, en.Npc);
 
-            ReadyEncounter();
+            //ReadyEncounter();
         }
 
         private void btn_Rest_Click(object sender, EventArgs e)
@@ -185,47 +185,47 @@ namespace RPGFramework.GUI
 
         private void btn_PrimaryAtk_Click(object sender, EventArgs e)
         {
-            cs.btn_PrimaryAtk_Status = "clicked";
-            c.Cs.btn_PrimaryAtk_Status = "clicked";
-            //CombatOld co = new CombatOld();
-            //int damage = co.PrimaryAtk(pc, en.Npc);
-            int damage = en.Npc.CurrentHealth;
-            c.PrimaryAttack(pc, en.Npc);
-            damage -= en.Npc.CurrentHealth;
-            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
-            // This is ghetto
-            en.Npc.CurrentHealth -= damage;
-            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
+            //cs.btn_PrimaryAtk_Status = "clicked";
+            //c.Cs.btn_PrimaryAtk_Status = "clicked";
+            ////CombatOld co = new CombatOld();
+            ////int damage = co.PrimaryAtk(pc, en.Npc);
+            //int damage = en.Npc.CurrentHealth;
+            //c.PrimaryAttack(pc, en.Npc);
+            //damage -= en.Npc.CurrentHealth;
+            //mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            //// This is ghetto
+            //en.Npc.CurrentHealth -= damage;
+            //tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_FocusPri_Click(object sender, EventArgs e)
         {
-            Combat c = new Combat();
-            int damage = c.PrimaryFoc(pc, en.Npc);
-            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
-            // This is ghetto
-            en.Npc.CurrentHealth -= damage;
-            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
+            //Combat c = new Combat();
+            //int damage = c.PrimaryFoc(pc, en.Npc);
+            //mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            //// This is ghetto
+            //en.Npc.CurrentHealth -= damage;
+            //tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_SecondaryAtk_Click(object sender, EventArgs e)
         {
-            Combat c = new Combat();
-            int damage = c.SecondaryAtk(pc, en.Npc);
-            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
-            // This is ghetto
-            en.Npc.CurrentHealth -= damage;
-            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
+            //Combat c = new Combat();
+            //int damage = c.SecondaryAtk(pc, en.Npc);
+            //mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            //// This is ghetto
+            //en.Npc.CurrentHealth -= damage;
+            //tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_FocusSec_Click(object sender, EventArgs e)
         {
-            Combat c = new Combat();
-            int damage = c.SecondaryFoc(pc, en.Npc);
-            mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
-            // This is ghetto
-            en.Npc.CurrentHealth -= damage;
-            tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
+            //Combat c = new Combat();
+            //int damage = c.SecondaryFoc(pc, en.Npc);
+            //mlb_ActionLog.AppendText("You did " + damage.ToString() + " with your attack!\n");
+            //// This is ghetto
+            //en.Npc.CurrentHealth -= damage;
+            //tb_NPCHP.Text = en.Npc.CurrentHealth.ToString();
         }
 
         private void btn_Option1_Click(object sender, EventArgs e)

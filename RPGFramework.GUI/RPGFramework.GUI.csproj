@@ -84,9 +84,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RPGFrameworkEntities\RPGFramework.Entities.csproj">
-      <Project>{514d0475-6586-4614-8701-a48d75c0362b}</Project>
-      <Name>RPGFramework.Entities</Name>
+    <ProjectReference Include="..\RPGFramework\RPGFramework.csproj">
+      <Project>{55ca92aa-8cd3-4278-b61c-58616040da77}</Project>
+      <Name>RPGFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

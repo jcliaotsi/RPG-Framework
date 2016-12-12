@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[Characters] (
+    [CharacterId]         INT          IDENTITY,
+    [Name]                VARCHAR (50) DEFAULT ('Newbie') NOT NULL,
+    [Class]               VARCHAR (50) NOT NULL,
+    [Health]              INT          NOT NULL,
+    [Spirit]              INT          NOT NULL,
+    [Physical]            INT          NOT NULL,
+    [Grit]                INT          NOT NULL,
+    [Magick]              INT          NOT NULL,
+    [Dexterity]           INT          NOT NULL,
+    [Focus]               INT          NOT NULL,
+    [PrimaryAttack]       INT          NOT NULL,
+    [SecondaryAttack]     INT          NOT NULL,
+    [PrimaryAttackType]   VARCHAR (50) NOT NULL,
+    [SecondaryAttackType] VARCHAR (50) NOT NULL,
+    [Gender]              VARCHAR (50) NOT NULL,
+    [Humour]              VARCHAR (50) NULL,
+    [LastAction]          VARCHAR (50) NOT NULL DEFAULT 'none',
+    [DamageTaken]         INT          DEFAULT ((0)) NOT NULL,
+    [Alive]               BIT          DEFAULT ((1)) NOT NULL,
+    [Encounter]           INT          NULL,
+    PRIMARY KEY CLUSTERED ([CharacterId] ASC),
+    CONSTRAINT [FK_Characters_Encounters] FOREIGN KEY ([Encounter]) REFERENCES [dbo].[Encounters] ([EncounterId])
+);
+

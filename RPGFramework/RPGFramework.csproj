@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ActionWorker.cs" />
+    <Compile Include="Entities\Character.cs" />
+    <Compile Include="Entities\ControlStatus.cs" />
+    <Compile Include="Entities\Dice.cs" />
+    <Compile Include="Entities\Encounter.cs" />
+    <Compile Include="Entities\EntityClass.cs" />
+    <Compile Include="Entities\NPC.cs" />
+    <Compile Include="Entities\Utilities.cs" />
     <Compile Include="Models\RPGFrameworkDataContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,13 +64,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RPGFramework.GUI\RPGFramework.GUI.csproj">
-      <Project>{cd1dc293-2ad3-41c8-9263-fa60237f83b0}</Project>
-      <Name>RPGFramework.GUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RPGFrameworkEntities\RPGFramework.Entities.csproj">
-      <Project>{514d0475-6586-4614-8701-a48d75c0362b}</Project>
-      <Name>RPGFramework.Entities</Name>
+    <ProjectReference Include="..\RPGFramework.Database\RPGFramework.Database.sqlproj">
+      <Project>{e3aeaa13-2d2c-48e0-803e-7ef8a112fc1a}</Project>
+      <Name>RPGFramework.Database</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

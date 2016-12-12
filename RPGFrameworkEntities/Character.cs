@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RPGFramework.Models Models;
 
 namespace RPGFramework.Entities
 {
@@ -34,6 +35,8 @@ namespace RPGFramework.Entities
         private string _primaryType { get; set; }
         private string _secondaryType { get; set; }
         private int _currentHealth { get; set; }
+        private bool _alive { get; set; }
+        private int _encounter { get; set; }
 
         #endregion
 
@@ -184,6 +187,27 @@ namespace RPGFramework.Entities
             }
         }
 
+        public bool Alive
+        {
+            get
+            {
+                return _alive;
+            }
+
+            set
+            {
+                _alive = value;
+            }
+        }
+
+        public int Encounter
+        {
+            get
+            {
+                return _encounter;
+            }
+        }
+
         #endregion
 
         #region Constructors
@@ -218,7 +242,11 @@ namespace RPGFramework.Entities
                         _focus = 10;
                         _primaryType = "physical";
                         _secondaryType = "magick"; // Possibly switch to dex?
-                        break;
+                        using (Models.RPGFrameworkDataContext context)
+                        {
+
+                        }
+                            break;
                     }
 
                 case ("Builder"):

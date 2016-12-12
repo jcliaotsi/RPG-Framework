@@ -55,6 +55,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RPGFramework.Database\RPGFramework.Database.sqlproj">
+      <Project>{e3aeaa13-2d2c-48e0-803e-7ef8a112fc1a}</Project>
+      <Name>RPGFramework.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

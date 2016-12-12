@@ -12,9 +12,9 @@ namespace RPGFramework.Utility
         private static Settings _instance;
         private string _connectionString;
 
-        private Settings()
+        public Settings()
         {
-            _connectionString = "Data Source=.;Initial Catalog=RPGFramework;Integrated Security=True";
+            _connectionString = "Data Source=.;Initial Catalog=RPGFrameworkDatabase;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True";
         }
 
         public static Settings Instance

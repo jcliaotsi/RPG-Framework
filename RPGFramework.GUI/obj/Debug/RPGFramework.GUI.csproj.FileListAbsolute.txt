@@ -8,13 +8,13 @@ C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFram
 C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.pdb
 C:\Users\thomas.hanby\Workspaces\RPGFramework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.MainWindow.resources
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFramework.GUI.exe.config
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.exe
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFramework.GUI.exe
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFramework.GUI.pdb
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFramework.exe
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFramework.pdb
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.csprojResolveAssemblyReference.cache
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.MainWindow.resources
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.Properties.Resources.resources
 C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.csproj.GenerateResource.Cache
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFrameworkEntities.dll
-C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\bin\Debug\RPGFrameworkEntities.pdb
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.exe
+C:\Users\thomas.hanby\Source\Repos\RPG-Framework\RPGFramework.GUI\obj\Debug\RPGFramework.GUI.pdb
